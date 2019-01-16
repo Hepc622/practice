@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hniu.hibernate.one2one.bean">
+	<class name="Department" table="DEPARTMENTS">
+		<id name="id" column="DEPARTMENT_ID">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" column="DEPARTMENT_NAME"></property>
+		<!-- 以多对一形式给该表产生一个外键，且使用update="true"属性设置为唯一标记 ,这样外表就不能引用了 -->
+		<many-to-one name="manager"  class="Manager" column="MANAGER_ID" unique="true" property-ref="manager">
+		</many-to-one>
+	</class>
+</hibernate-mapping>

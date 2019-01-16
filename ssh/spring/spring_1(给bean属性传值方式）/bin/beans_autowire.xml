@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	<bean id="phone" class="com.hniu.spring.beans.autowire.Phone"
+		p:brand="诺基亚" p:screen="1寸" p:price="99.0" />
+	<bean id="address" class="com.hniu.spring.beans.autowire.Address"
+		p:city="郴州" p:street="国庆北路" />
+	<!-- byName通过bean的id和该bean的属性相比较，是一样的就会进行自动封装 缺点如果id名字于属性名字有一点不相同就不会进行自动封装 -->
+	<bean id="personAotuwire_byName" class="com.hniu.spring.beans.autowire.Person"
+		p:name="personAotuwire_byName" p:sex="男" p:age="21" autowire="byName" />
+	<!-- byType通过bean的类型和该bean的属性类型相比较，是一样的就会进行自动封装 缺点如果ioc容器中有多个该类的bean将会报出你的bean类型不是唯一的 -->
+	<bean id="personAotuwire_byType" class="com.hniu.spring.beans.autowire.Person"
+		p:name="personAotuwire_byType" p:sex="男" p:age="21" autowire="byName" />
+</beans>

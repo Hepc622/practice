@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hniu.hibernate.joined_subclass.bean">
+	<class name="Person" table="CLASS_INFO">
+		<id name="id" column="ID" type="integer">
+			<generator class="native"></generator>
+		</id>
+		<!-- 父类的属性 -->
+		<property name="name" column="NAME" type="string"></property>
+		<property name="age" column="AGE" type="integer"></property>
+		<property name="sex" column="SEX" type="boolean"></property>
+
+		<!-- 映射继承类的属性 <joined-subclass>表 -->
+		<joined-subclass name="Student" table="STUDENTS" >
+			<key  column="STUDENT_ID"></key>
+			<property name="clazz" column="CLAZZ" type="string"></property>
+		</joined-subclass>
+	</class>
+</hibernate-mapping>

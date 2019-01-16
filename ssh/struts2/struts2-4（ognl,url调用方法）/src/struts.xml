@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 异常的处理 -->
+	<package name="exception" extends="struts-default">
+		<global-results>
+			<result name="null">/login.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping result="null" exception=""></exception-mapping>
+		</global-exception-mappings>
+		<action name="math" class="com.hniu.exception.Myexception"
+			method="execute">
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+	<!-- 允许url调用action类中的方法。定义常量 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	<!-- 允许ognl调用类静态方法 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<!-- ognl表达式 -->
+	<package name="ognl" extends="struts-default">
+		<action name="ognl_login" class="com.hniu.ognl.Ognl">
+			<result>/ognl/show.jsp</result>
+		</action>
+	</package>
+
+	<!-- 转发，重定向 -->
+	<package name="loginModule" extends="struts-default">
+		<action name="login" class="com.hniu.login.LoginAction" method="login">
+			<result name="loginSuccess">/WEB-INF/pages/homepage.jsp</result>
+		</action>
+		<action name="outLogin" class="com.hniu.login.LoginAction"
+			method="outLogin">
+			<result name="outLogin">/WEB-INF/pages/homepage.jsp</result>
+		</action>
+		<action name="result" class="com.hniu.struts2.action.result.Actoin_Result">
+			<result name="resultLogin" type="dispatcher">/login.jsp</result>
+			<result name="resultSuccess" type="redirect">/success.jsp</result>
+			<result name="resultFail" type="redirectAction">
+				<param name="actionName">fail</param>
+				<param name="namespace">/hpc</param>
+			</result>
+			<result name="resultRegister" type="chain">
+				<param name="actionName">register</param>
+				<param name="namespace">/hpc</param>
+			</result>
+		</action>
+	</package>
+	<!-- 指定被转发，重定向的action -->
+	<package name="resultPackage" namespace="/hpc" extends="struts-default">
+		<action name="register" class="com.hniu.struts2.action.result.TestResult">
+			<result>/register.jsp</result>
+		</action>
+		<action name="fail" class="com.hniu.struts2.action.result.TestResult">
+			<result>/fail.jsp</result>
+		</action>
+	</package>
+	<!-- ognl表达式 -->
+	<package name="user-info" extends="struts-default">
+		<action name="info" class="com.hniu.action.stack.PersonAction">
+			<result>
+				/userinfo.jsp
+			</result>
+		</action>
+	</package>
+	<!-- url调用action中的方法 -->
+	<package name="url_execute_method" extends="struts-default">
+		<action name="url_method"
+			class="com.hniu.urlexecutemethod.Url_Execute_Method_Action">
+			<result>/index.jsp</result>
+		</action>
+	</package>
+	<!-- 通配符 -->
+	<package name="wildcard" extends="struts-default">
+		<action name="user_*" class="com.hniu.wildcard.WildCardAction"
+			method="{1}">
+			<result name="{1}">/{1}.jsp</result>
+		</action>
+	</package>
+
+</struts>

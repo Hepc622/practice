@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper的namespace属性一定是唯一的（包名+文件名 就可以了） -->
+<mapper namespace="com.hpc.fan.dao.UserDao">
+	<resultMap type="user" id="userMap">
+		<id column="user_id" property="user_id" />
+		<result column="user_name" property="user_name" />
+		<result column="user_pwd" property="user_pwd" />
+		<result column="create_date" property="create_date" />
+	</resultMap>
+	<select id="getUserEntity" resultMap="userMap">
+		select
+		*
+		from users t
+		where
+		t.user_name=#{user_name}
+	</select>
+	<insert id="saveUserEntity" parameterType="user">
+		insert into users
+		value(#{user_name},#{user_pwd},#{create_date})
+	</insert>
+	<update id="updateUserEntity" parameterType="user">
+		UPDATE users SET
+		user_name = #{user_name},user_pwd=#{user_pwd} WHERE user_id =
+		#{user_id}
+	</update>
+</mapper>

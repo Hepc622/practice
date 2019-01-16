@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<constant name="struts.custom.i18n.resources" value="SurveyAction"></constant>
+	<!-- package可以多继承，以‘,’分开，如果不继承jfreechart-default包的就会报找不到该返回值的类型的错误 -->
+	<package name="suervey" namespace="/"
+		extends="struts-default,jfreechart-default">
+		<!-- 将写好的拦登陆截器注册进去 -->
+		<interceptors>
+			<!-- 指定要经过的拦截器 -->
+			<interceptor name="rightInterceptor"
+				class="com.hniu.surveypark.strus2.interceptor.RightInterceptor"></interceptor>
+			<interceptor name="catchRightInterceptor"
+				class="com.hniu.surveypark.strus2.interceptor.CatchRightInterceptor"></interceptor>
+			<!-- 放入拦截器栈中 -->
+			<interceptor-stack name="surveyStack">
+				<!-- 压入写好的拦截器 -->
+				<interceptor-ref name="catchRightInterceptor" />
+				<interceptor-ref name="rightInterceptor" />
+				<!-- 默认的拦截器 -->
+				<interceptor-ref name="paramsPrepareParamsStack" />
+				<interceptor-ref name="defaultStack">
+					<!-- 是否将最新的model刷新到栈顶 -->
+					<param name="modelDriven.refreshModelBeforeResult">true</param>
+					<!-- 设置上传的类型及其大小 -->
+					<param name="fileUpload.maximumSize">60000</param>
+					<param name="fileUpload.allowedExtensions">.jpg,.png,.bmp</param>
+					<param name="fileUpload.allowedTypes">image/jpg,image/png,image/bmp</param>
+				</interceptor-ref>
+			</interceptor-stack>
+
+		</interceptors>
+		<!-- 使用我们定义的拦截器栈 -->
+		<default-interceptor-ref name="surveyStack" /> 
+		<!-- 定义全局返回结果 -->
+		<global-results>
+			<!-- 拦截器的返回值，且指定跳转到那个页面去 -->
+			<result name="toLogin">/index.jsp</result>
+			<result name="notRight">/notRight.html</result>
+			<!-- 全局回调到survey设计页面的结果 -->
+			<result name="toDesignAction" type="redirectAction">
+				<param name="actionName">Sms_su_toDesign</param>
+				<param name="namespace">/</param>
+				<param name="surveyId">${surveyId}</param>
+			</result>
+		</global-results>
+
+		<!-- 注册action -->
+		<action name="Sms_re_*" class="registerAction" method="{1}">
+			<result name="register">/register.jsp</result>
+			<!-- 请求成功调到index.jsp -->
+			<result name="success">/index.jsp</result>
+			<!-- 请求错误调到register.jsp -->
+			<result name="input">/register.jsp</result>
+		</action>
+		<!-- 登陆action -->
+		<action name="Sms_lo_*" class="loginAction" method="{1}">
+			<result name="index">/index.jsp</result>
+			<!-- 请求成功调到index.jsp -->
+			<result name="success">/index.jsp</result>
+			<!-- 请求错误调到index.jsp -->
+			<result name="input">/index.jsp</result>
+		</action>
+		<!-- 调查Action -->
+		<action name="Sms_su_*" class="surveyAction" method="{1}">
+			<result name="toMySurvey">/my-survey.jsp</result>
+			<!-- 请求成功调到index.jsp -->
+			<result name="toNewSurvey">/new-survey.jsp</result>
+			<result name="toDesign">/new-survey.jsp</result>
+			<result name="toEditSurvey">/edit-survey.jsp</result>
+			<result name="toUpLoadLogo">/up-load-logo.jsp</result>
+			<result name="toAnalysis">/analysis-survey.jsp</result>
+			<result name="statusSurvey" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">Sms_su_toMySurvey</param>
+			</result>
+			<!-- 重定向到Action -->
+			<result name="deleteSurvey" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">Sms_su_toMySurvey</param>
+			</result>
+			<result name="clearSurvey" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">Sms_su_toMySurvey</param>
+			</result>
+			<!-- 显示错误返回i值 -->
+			<result name="input">${uploadPage}</result>
+
+		</action>
+		<!-- 页面Action -->
+		<action name="Sms_pa_*" class="pageAction" method="{1}">
+			<result name="toAddPage">/add-page.jsp</result>
+			<result name="toEditPage">/add-page.jsp</result>
+			<result name="toMoveOrCopyPage">/move-or-copy-page.jsp</result>
+		</action>
+		<!-- 问题action -->
+		<action name="Sms_qu_*" class="questionAction" method="{1}">
+			<result name="toQuestionTypeChoosePage">/question-type-choose.jsp</result>
+
+			<result name="0">/non-matrix-whith-other-question-design.jsp
+			</result>
+			<result name="1">/non-matrix-whith-other-question-design.jsp
+			</result>
+			<result name="2">/non-matrix-whith-other-question-design.jsp
+			</result>
+			<result name="3">/non-matrix-whith-other-question-design.jsp
+			</result>
+
+			<result name="4">/non-matrix-select-question-design.jsp</result>
+			<result name="5">/non-matrix-text-question-design.jsp</result>
+
+			<result name="6">/matrix-normal-question-design.jsp</result>
+			<result name="7">/matrix-normal-question-design.jsp</result>
+			<result name="8">/matrix-select-question-design.jsp</result>
+		</action>
+		<!-- 参与调查 -->
+		<action name="Sms_par_*" class="participationAction" method="{1}">
+			<result name="toParticipation">
+				/participation-survey.jsp
+			</result>
+			<result name="participation">/participating.jsp</result>
+			<!-- 取消后重定向到参与调查页面 -->
+			<result name="cancelToParticipation" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">Sms_par_toParticipation</param>
+			</result>
+		</action>
+		<!-- 非矩阵式调查分析 -->
+		<action name="AnalysisAction" class="analysisAction">
+			<result name="success" type="chart">
+				<param name="value">chart</param>
+				<param name="type">png</param>
+				<param name="width">640</param>
+				<param name="height">480</param>
+			</result>
+		</action>
+		<!-- 矩阵式调查分析 -->
+		<action name="AnalysisMatrixAction" class="analysisMatrixAction">
+			<result name="6">/matrixNormalStatistics.jsp</result>
+			<result name="7">/matrixNormalStatistics.jsp</result>
+			<result name="8">/matrixSelectStatistics.jsp</result>
+		</action>
+		<!-- 收集调查信息 -->
+		<action name="CollectAction" class="collectAction">
+			<result name="success" type="stream">
+				<!-- 相当于设置响应类型 resp.setContentType("application/pdf");==<param name="contentType">application/vnd.ms-excel</param> -->
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="inputName">outexcel</param>
+				<param name="contentDisposition">
+					attachment;filename="XXX.xls"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+
+		</action>
+		<action name="Sms_ri_*" class="rightAction" method="{1}">
+			<result name="toRight">/survey-right.jsp</result>
+
+			<result name="toAddRight">/add-right.jsp</result>
+			<result name="addRight" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">Sms_ri_toRight</param>
+			</result>
+
+			<result name="toEditRight">/edit-right.jsp</result>
+			<result name="editRight" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">Sms_ri_toRight</param>
+			</result>
+		</action>
+		<action name="Sms_ro_*" class="roleAction" method="{1}">
+			<result name="toRole">/survey-role.jsp</result>
+			<result name="toAddRole">/add-role.jsp</result>
+			<result name="toEditRole">
+				/add-role.jsp
+			</result>
+			<result name="addRole" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">Sms_ro_toRole</param>
+			</result>
+		</action>
+		<action name="Sms_us_*" class="userAuthorizationAction" method="{1}">
+			<result name="toAuthorization">/survey-user-authorization.jsp</result>
+			<result name="toEditAuthorization">/add-authorization.jsp</result>
+			<result name="editAuthorization" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">Sms_us_toAuthorization</param>
+			</result>
+			<result name="clearAuthorization" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">Sms_us_toAuthorization</param>
+			</result>
+		</action>
+	</package>
+</struts>

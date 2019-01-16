@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="fandatabase@localhost" uuid="7cddbd5f-4fb7-439f-ae44-0a1d15fb8f43">
+      <database-info product="MySQL" version="5.5.36" jdbc-version="3.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.8 ( Revision: ${svn.Revision} )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:fandatabase</introspection-schemas>
+    </data-source>
+  </component>
+</project>

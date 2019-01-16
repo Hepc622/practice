@@ -1,0 +1,57 @@
+<!DOCTYPE validators PUBLIC
+  "-//Apache Struts//XWork Validator 1.0.3//EN"
+  "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="userName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>userName不能为空</message>
+		</field-validator>
+	</field>
+	<field name="passwordOne">
+		<field-validator type="requiredstring" short-circuit="true">
+			<message>password不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength" short-circuit="true">
+			<param name="minLength">6</param>
+			<param name="maxLength">12</param>
+			<message>密码长度必须在${minLength}-${maxLength}之间</message>
+		</field-validator>
+	</field>
+	<field name="passwordTwo">
+	<field-validator type="requiredstring" short-circuit="true">
+		<message>password不能为空</message>
+	</field-validator>
+	<field-validator type="expression">
+		<param name="expression"><![CDATA[(passwordOne==passwordTwo)]]></param>
+		<message>两次密码不一致，请重新输入</message>
+	</field-validator>
+</field>
+	<field name="userEail">
+		<field-validator type="requiredstring" short-circuit="true">
+			<message>eail不能为空</message>
+		</field-validator>
+	</field>
+	<field name="age">
+		<field-validator type="int" short-circuit="true">
+			<param name="min">1</param>
+			<param name="max">130</param>
+			<message>${age}必须在${min}-${max}之间</message>
+		</field-validator>
+	</field>
+	<field name="brithDay">
+		<field-validator type="date" short-circuit="true">
+			<param name="min">1000-1-1</param>
+			<param name="max">2990-1-1</param>
+			<message>${brithDay}必须在${min}-${max}之间</message>
+		</field-validator>
+	</field>
+	<field name="idCard">
+		<field-validator type="requiredstring" short-circuit="true">
+			<message></message>
+		</field-validator>
+		<field-validator type="idcard">
+			<message>${idCard}格式不合法</message>
+		</field-validator>
+	</field>
+</validators>

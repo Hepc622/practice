@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	<bean id="car" class="com.hniu.spring.beans.relation.Car" p:brand="audi"
+		p:price="300000" />
+		
+	<!-- beans之间的关系 
+		继承关系 
+			可以通过parent来进行继承指定的bean
+			在子bean中如果不进行重写属性的话就会使用父bean的属性
+		依赖关系
+			可以通过deponds-on来指定，如果该ico容器中没有指定的bean，该bean就不会通过编译
+		抽象
+			可以通过abstract来修饰一个bean，该类想不会被实例，只能作为一个模板bean,
+			作为模板最好不用指定class,class留给子bean来给定-->
+	<bean id="person" class="com.hniu.spring.beans.relation.Person" abstract="true"
+		p:name="张三" p:sex="男" p:age="21" />
+	<bean id="person2" p:name="小丽" p:sex="女" p:age="18" parent="person" depends-on="car"/>
+</beans>

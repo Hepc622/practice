@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hniu.surveypark.model">
+
+	<class name="Survey" table="surveys">
+		<id name="survey_id" column="survey_id" type="java.lang.Integer">
+			<generator class="identity"></generator>
+		</id>
+		<property name="survey_title" column="survey_title" type="java.lang.String"></property>
+
+		<property name="survey_preText" column="survey_preText" type="java.lang.String"></property>
+
+		<property name="survey_nextText" column="survey_nextText"
+			type="java.lang.String"></property>
+
+		<property name="survey_exitText" column="survey_exitText"
+			type="java.lang.String"></property>
+
+		<property name="survey_doneText" column="survey_doneText"
+			type="java.lang.String" length="30"></property>
+
+		<property name="survey_closed" column="survey_closed" type="java.lang.Boolean"
+			length="30"></property>
+
+		<property name="survey_logo" column="survey_logo" type="java.lang.String"></property>
+
+		<property name="survey_creatTime" column="survey_creatTime"
+			type="java.util.Date"></property>
+
+		<property name="maxPageNumber"
+			formula="(select max(p.page_order) from pages p where p.survey_id=survey_id)"
+			type="java.lang.Float" />
+
+		<property name="minPageNumber"
+			formula="(select min(p.page_order) from pages p where p.survey_id=survey_id)"
+			type="java.lang.Float" />
+
+		<!-- 从survey到user多对一关联关系 -->
+		<many-to-one name="user" column="user_id" class="User"></many-to-one>
+		<!-- 双向关联 -->
+		<set name="page" inverse="true" order-by="page_order">
+			<key>
+				<column name="survey_id"></column>
+			</key>
+			<one-to-many class="Page" />
+		</set>
+	</class>
+</hibernate-mapping>

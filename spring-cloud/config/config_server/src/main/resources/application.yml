@@ -1,0 +1,22 @@
+server:
+  port: 7010
+#注册到注册中心进行管理
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: config_server
+  cloud:
+    config:
+      label: master # 配置仓库的分支
+      server:
+        git:
+          uri: https://github.com/Hepc622/spring-cloud-config-repo/
+          # 配置仓库路径
+          searchPaths: config
+          force-pull: true
+         # username: xxx # 访问git仓库的用户名
+         # password=xxxxoooo # 访问git仓库的用户密码 如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写
+          # time: 链接超时时间

@@ -1,0 +1,17 @@
+1 先导入spring jar包
+	
+	1.导入jar包
+	2.配置web.xml文件
+	3.配置spring.xml文件
+		1.配置3cp0数据源
+		2.配置hibernate的sessionfactroy
+		
+2 导入hibernate
+	1.导入hibernate的jar包
+	2.导入jdbc的jar，加入3cp0的jar包
+	4.配置hibernate.xml文件。
+	5.建立持久化类，和对应的.hbm.xml文件生成对应的数表
+3 导入strus
+	1.导入strus的jar包
+	2.配置web文件的strus的filter
+	3.配置strus文件

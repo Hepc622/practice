@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hniu.surveypark.model">
+	<class name="Role" table="roles">
+		<id name="role_id" column="role_id" type="java.lang.Integer">
+			<generator class="identity"></generator>
+		</id>
+		<property name="role_name" column="role_name" type="java.lang.String"></property>
+
+		<property name="role_value" column="role_value" type="java.lang.String"></property>
+
+		<property name="role_desc" column="role_desc" type="java.lang.String"></property>
+
+		<set name="role_right" table="right_roles_links" lazy="false">
+			<key column="role_id" />
+			<many-to-many class="Right" column="right_id"/>
+		</set>
+	</class>
+</hibernate-mapping>

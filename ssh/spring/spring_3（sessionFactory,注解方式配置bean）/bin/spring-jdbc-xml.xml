@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<bean id="bookDao" class="com.hniu.spring.transaction.xml.BookDao" autowire="byName"></bean>
+	<bean id="shopDao" class="com.hniu.spring.transaction.xml.ShopDao" autowire="byName"></bean>
+	<bean id="userDao" class="com.hniu.spring.transaction.xml.UserDao" autowire="byName"></bean>
+	<bean id="shopService" class="com.hniu.spring.transaction.xml.ShopService" autowire="byName"></bean>
+	<!-- 扫描注解类 -->
+	<context:component-scan base-package="com.hniu.spring.transaction.xml"></context:component-scan>
+	<!-- 加载jdbc数据的配置文件 -->
+	<context:property-placeholder location="classpath:db.properties"/>
+	<!-- 配置jdbc连接参数 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="user" value="${jdbc.user}"></property>
+		<property name="password" value="${jdbc.password}"></property>
+		<property name="driverClass" value="${jdbc.driverClass}"></property>
+		<property name="jdbcUrl" value="${jdbc.jdbcUrl}"></property>
+		<property name="initialPoolSize" value="${jdbc.initPoolSize}"></property>
+		<property name="maxPoolSize" value="${jdbc.maxPoolSize}"></property>
+	</bean>
+	
+	<!-- 配置jdbc类 -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<!-- 配置具名参数jdbc类 -->
+	<bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg name="dataSource" ref="dataSource"></constructor-arg>
+	</bean>
+	
+	<!-- 配置事务管理 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<!--  事务属性配置 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<!-- 设置事务属性 -->
+			<tx:method name="start" propagation="REQUIRES_NEW"/>
+		</tx:attributes>
+	</tx:advice>
+	<!-- 配置事务切点 -->
+	<aop:config>
+		<aop:pointcut expression="execution( * com.hniu.spring.transaction.xml.*.*(..))" 
+		id="txPointcut"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
+	</aop:config>
+</beans>

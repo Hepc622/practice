@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper的namespace属性一定是唯一的（包名+文件名 就可以了） -->
+<mapper namespace="com.hpc.fan.dao.ProductDao">
+	<resultMap type="product" id="productMap">
+		<id column="pro_id" property="pro_id" />
+		<result column="pro_name" property="pro_name" />
+		<result column="pro_image" property="pro_image" />
+		<result column="pro_parameter" property="pro_parameter" />
+		<result column="pro_specification" property="pro_specification" />
+		<result column="pro_type" property="pro_type" />
+		<!-- 连表查询 -->
+		<association column="parent_title" property="parent_title"
+			javaType="title">
+			<id column="title_id" property="title_id" />
+			<result column="title_name" property="title_name" />
+			<result column="title_url" property="title_url" />
+			<result column="title_type" property="title_type" />
+		</association>
+	</resultMap>
+	<select id="getProductCount" parameterType="int" resultType="int">
+		SELECT COUNT("id") count
+		FROM products c
+		WHERE c.parent_id=#{id}
+	</select>
+
+	<select id="getProductBeforeOrAfter" resultMap="productMap">
+		SELECT
+		*
+		FROM
+		products c
+		LEFT JOIN titles s ON s.title_id = c.parent_id
+		WHERE c.parent_id=#{pid} and
+		<choose>
+			<when test="flag == 2">
+				c.pro_id &gt; #{cid}
+				ORDER BY
+				c.pro_id ASC
+				LIMIT 1
+			</when>
+			<when test="flag == 1">
+				c.pro_id &lt; #{cid}
+				ORDER BY
+				c.pro_id DESC
+				LIMIT 1
+			</when>
+		</choose>
+	</select>
+
+	<select id="getProductEntity" parameterType="int" resultMap="productMap">
+		SELECT
+		*, c.pro_id
+		FROM
+		products c
+		LEFT JOIN titles s ON s.title_id =
+		c.parent_id
+		WHERE
+		<choose>
+			<when test="first">
+				c.parent_id = #{id}
+				ORDER BY
+				c.pro_id DESC
+				LIMIT 1;
+			</when>
+			<otherwise>
+				c.pro_id=#{id}
+			</otherwise>
+		</choose>
+	</select>
+	<select id="getAllProductEntity" resultMap="productMap">
+		SELECT
+		*,t.pro_id
+		FROM
+		products t
+		LEFT JOIN titles s
+		ON
+		s.title_id=t.parent_id
+		WHERE
+		t.parent_id =
+		#{p_id} ORDER BY
+		pro_id
+		DESC LIMIT
+		#{begin},#{everypage}
+	</select>
+	<select id="deleteProductEntity" parameterType="int" resultType="integer">
+		delete
+		from products
+		where pro_id=#{id}
+	</select>
+
+	<select id="saveProductEntity" parameterType="product"
+		resultType="integer">
+		INSERT INTO products
+		VALUES(null,#{pro.pro_name},#{imgUrl},#{pro.pro_specification},#{pro.pro_parameter},#{pro.pro_type},#{pro.parent_title.title_id})
+	</select>
+	<select id="getRandomProduct" resultMap="productMap"><!-- 随机获取5个产品 -->
+		SELECT
+		*
+		FROM
+		products
+		ORDER BY
+		RAND()
+		LIMIT 5
+	</select>
+</mapper>

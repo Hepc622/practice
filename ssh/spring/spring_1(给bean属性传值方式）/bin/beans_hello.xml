@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	<!-- 配置一个bean class: 是通过全类名反射机制获取到该对象 所以必修要有一个无参的构造函数 id: 使用去获取到才对象的标识，一定是唯一的 -->
+	<bean id="hello" class="com.hniu.spring.beans.hello.Hello">
+		<!-- 为bean的属性赋予值 -->
+		<property name="name" value="hello spring!"></property>
+	</bean>
+	<!--使用构造器配置bean属性 
+	-->
+	<bean id="phone" class="com.hniu.spring.beans.hello.Phone">
+		<constructor-arg value="5.5" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="诺基亚" type="java.lang.String"></constructor-arg>
+		<constructor-arg value="3000" type="double"></constructor-arg>
+	</bean>
+	<!-- 重载构造器可以通过 给参数指定数据类型来区分 -->
+	<bean id="phone2" class="com.hniu.spring.beans.hello.Phone">
+		<constructor-arg value="5.5" type="java.lang.String"></constructor-arg>
+		<!-- 特殊字符可以用<!CDATA[[]]> -->
+		<constructor-arg type="java.lang.String">
+			<value><![CDATA[<华为>]]></value>
+		</constructor-arg>
+		<constructor-arg type="java.lang.String">
+			<value>3000</value>
+		</constructor-arg>
+	</bean>
+	<!-- bean对象相互关联的属性设置 -->
+	<bean id="person" class="com.hniu.spring.beans.hello.Person">
+		<property name="name" value="何鹏程"></property>
+		<property name="sex" value="男"></property>
+		<property name="age" value="21"></property>
+		<!-- 属性是对象的可以用ref指向一个bean进行赋值对象 <property name="phone" ref="phone2"></property> -->
+		<!-- 使用内部bean来给属性赋值，内部bean不能被外部引用 -->
+		<property name="phone">
+			<bean class="com.hniu.spring.beans.hello.Phone">
+				<constructor-arg value="5.5" type="java.lang.String"></constructor-arg>
+				<!-- 特殊字符可以用<!CDATA[[]]> -->
+				<constructor-arg type="java.lang.String">
+					<value><![CDATA[<小米>]]></value>
+				</constructor-arg>
+				<constructor-arg type="java.lang.String">
+					<value>3000</value>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean >
+	<!-- 属性的级联 ，对象创建的时候才能进行级联赋值 -->
+	<bean id="person2" class="com.hniu.spring.beans.hello.Person">
+		<constructor-arg value="小米"></constructor-arg>
+		<constructor-arg value=""></constructor-arg>
+		<constructor-arg value="6"></constructor-arg>
+		<!-- 使用级联是要先引入对象或者创建对象才可以 -->
+		<constructor-arg ref="phone2"></constructor-arg>
+		<property name="phone.price" value="20000000" ></property>
+	</bean>
+</beans>

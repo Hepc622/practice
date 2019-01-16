@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="struts2-8（时间类型转换器，错误信息的显示方式去li）">
+        <wb-resource deploy-path="/" source-path="/WebRoot"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="/struts2-8"/>
+        <property name="java-output-path" value="/struts2-8（时间类型转换器，错误信息的显示方式去li）/WebRoot/WEB-INF/classes"/>
+    </wb-module>
+</project-modules>

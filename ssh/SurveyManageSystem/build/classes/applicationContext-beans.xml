@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<!-- Dao -->
+	<bean id="userDao" class="com.hniu.surveypark.dao.impl.UserDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="surveyDao" class="com.hniu.surveypark.dao.impl.SurveyDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="pageDao" class="com.hniu.surveypark.dao.impl.PageDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="questionDao" class="com.hniu.surveypark.dao.impl.QuestionDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="answerDao" class="com.hniu.surveypark.dao.impl.AnswerDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="roleDao" class="com.hniu.surveypark.dao.impl.RoleDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="rightDao" class="com.hniu.surveypark.dao.impl.RightDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	<!-- Service -->
+	<bean id="userServiceImpl" class="com.hniu.surveypark.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao" />
+		<property name="roleDao" ref="roleDao" />
+	</bean>
+	<bean id="surveyServiceImpl" class="com.hniu.surveypark.service.impl.SurveyServiceImpl">
+		<property name="surveyDao" ref="surveyDao" />
+		<property name="pageDao" ref="pageDao" />
+		<property name="questionDao" ref="questionDao" />
+		<property name="answerDao" ref="answerDao" />
+	</bean>
+	<bean id="statisticsServiceImpl" class="com.hniu.surveypark.service.impl.StatisticsServiceImpl">
+		<property name="questionDao" ref="questionDao" />
+		<property name="answerDao" ref="answerDao" />
+	</bean>
+	<bean id="rightServiceImpl" class="com.hniu.surveypark.service.impl.RightServiceImpl">
+		<property name="rightDao" ref="rightDao" />
+	</bean>
+	<bean id="roleServiceImpl" class="com.hniu.surveypark.service.impl.RoleServiceImpl">
+		<property name="rightDao" ref="rightDao" />
+		<property name="roleDao" ref="roleDao" />
+	</bean>
+
+	<!-- Actoin -->
+	<bean id="registerAction" class="com.hniu.surveypark.strus2.action.impl.RegisterAction"
+		scope="prototype">
+		<property name="userService" ref="userServiceImpl" />
+	</bean>
+	<bean id="loginAction" class="com.hniu.surveypark.strus2.action.impl.LoginAction"
+		scope="prototype">
+		<property name="rightService" ref="rightServiceImpl" />
+		<property name="userService" ref="userServiceImpl" />
+	</bean>
+	<bean id="surveyAction" class="com.hniu.surveypark.strus2.action.impl.SurveyAction"
+		scope="prototype">
+		<property name="surveyService" ref="surveyServiceImpl" />
+	</bean>
+	<bean id="pageAction" class="com.hniu.surveypark.strus2.action.impl.PageAction"
+		scope="prototype">
+		<property name="surveyService" ref="surveyServiceImpl" />
+	</bean>
+	<bean id="questionAction" class="com.hniu.surveypark.strus2.action.impl.QuestionAction"
+		scope="prototype">
+		<property name="surveyService" ref="surveyServiceImpl" />
+	</bean>
+	<bean id="participationAction"
+		class="com.hniu.surveypark.strus2.action.impl.ParticipationAction"
+		scope="prototype">
+		<property name="surveyService" ref="surveyServiceImpl" />
+	</bean>
+	<bean id="analysisAction" class="com.hniu.surveypark.strus2.action.impl.AnalysisAction"
+		scope="prototype">
+		<property name="statisticsService" ref="statisticsServiceImpl" />
+	</bean>
+	<bean id="analysisMatrixAction"
+		class="com.hniu.surveypark.strus2.action.impl.AnalysisMatrixAction"
+		scope="prototype">
+		<property name="statisticsService" ref="statisticsServiceImpl" />
+	</bean>
+	<bean id="collectAction" class="com.hniu.surveypark.strus2.action.impl.CollectAction"
+		scope="prototype">
+		<property name="surveyService" ref="surveyServiceImpl" />
+	</bean>
+	<bean id="rightAction" scope="prototype"
+		class="com.hniu.surveypark.strus2.action.impl.RightAction">
+		<property name="rightService" ref="rightServiceImpl" />
+	</bean>
+	<bean id="roleAction" scope="prototype"
+		class="com.hniu.surveypark.strus2.action.impl.RoleAction">
+		<property name="roleService" ref="roleServiceImpl" />
+	</bean>
+	<bean id="userAuthorizationAction" scope="prototype"
+		class="com.hniu.surveypark.strus2.action.impl.UserAuthorizationAction">
+		<property name="userService" ref="userServiceImpl" />
+		<property name="rightService" ref="rightServiceImpl" />
+	</bean>
+	<!-- listen -->
+	<bean id="iniRightListen" class="com.hniu.surveypark.strus2.listen.InitRightListen">
+		<property name="rightService" ref="rightServiceImpl" />
+	</bean>
+</beans>

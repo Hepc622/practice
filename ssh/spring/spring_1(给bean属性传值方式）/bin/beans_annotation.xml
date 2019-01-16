@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<context:component-scan base-package="com.hniu.spring.beans.annotation"
+	resource-pattern="*.class" use-default-filters="false">
+		<!--  除了该过滤器过滤之外的类都进行自动注解配置
+			annotation:只对有注解标识的类进行封装
+			assignable:
+				只自动封装该过滤器的继承类或者实现类
+				需要更改默认过滤器
+				使其context:component-scan的属性
+				use-default-filters改为false
+		-->
+		<context:exclude-filter type="annotation" expression="com.hniu.spring.beans.annotation.Car"/>
+		<!--  只自动注解配置该过滤器过滤的类都进行自动注解配置
+		<context:include-filter type="annotation" expression=""/>
+		-->
+	</context:component-scan>
+</beans>

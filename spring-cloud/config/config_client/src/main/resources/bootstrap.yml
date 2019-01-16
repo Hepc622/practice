@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: config_client
+  cloud:
+    config:
+      profile: dev
+      uri: http://localhost:7010/
+#      如果config服务器在注册中心进行管理就不需要使用uri指定配置服务器的url，直接使用在注册中心的application name就行
+      label: master
+      discovery:
+        service-id: config_server
+        enabled: true #开启通过注册在注册中心的应用名来查找配置服务器

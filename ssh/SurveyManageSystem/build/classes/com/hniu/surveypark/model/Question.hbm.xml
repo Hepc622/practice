@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hniu.surveypark.model">
+	<class name="Question" table="questions">
+		<id name="question_id" column="question_id" type="java.lang.Integer">
+			<generator class="identity"></generator>
+		</id>
+		<property name="question_type" column="question_type" type="java.lang.Integer"></property>
+
+		<property name="question_title" column="question_title" type="java.lang.String"></property>
+
+		<property name="question_options" column="question_options"
+			type="java.lang.String"></property>
+
+		<property name="question_other" column="question_other" type="java.lang.Boolean"></property>
+
+		<property name="question_other_style" column="question_other_style"
+			type="java.lang.Integer"></property>
+
+		<property name="question_other_select_options" column="question_other_select_options"
+			type="java.lang.String"></property>
+
+		<property name="question_other_matrix_row_titles" column="question_other_matrix_row_titles"
+			type="java.lang.String"></property>
+
+		<property name="question_other_matrix_col_titles" column="question_other_matrix_col_titles"
+			type="java.lang.String"></property>
+
+		<property name="question_other_matrix_select_options" column="question_other_matrix_select_options"
+			type="java.lang.String"></property>
+		<many-to-one name="page" class="Page" column="page_id"></many-to-one>
+	</class>
+</hibernate-mapping>

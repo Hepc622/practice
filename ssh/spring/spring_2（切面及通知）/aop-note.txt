@@ -1,0 +1,37 @@
+1	导入aop的相关jar包
+	com.springsource.org.aopalliance-1.0.0.jar
+	com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar
+	spring-aop-4.0.0.RELEASE.jar
+	spring-aspects-4.0.0.RELEASE.jar
+	
+	commons-logging-1.1.1.jar
+	spring-beans-4.0.0.RELEASE.jar
+	spring-context-4.0.0.RELEASE.jar
+	spring-core-4.0.0.RELEASE.jar
+	spring-expression-4.0.0.RELEASE.jar
+2	将横切关注点的代码抽取出一个切面类
+	1 先把它放在ioc 中 注解@Component该类
+	2 在将该切面类还需要加入 注解@Aspect
+	3 在配置文件中配置
+		<aop:aspectj-autoproxy></aop:aspectj-autoproxy> 使其切面生效
+		<aop:config proxy-target-class="true"></aop:config> 
+		proxy-target-class：属性设置为true 将会选择CGLIB 进行代理
+		有两种方式进行动态代理
+			CGLIB 代理
+				运行类没有继承接口，要选择cglib代理将proxy-target-class设置为true
+			JDK 代理
+				运行类有继承接口，将自动选择JDK代理
+
+3	声明一个通知方法
+	@Before: 前置通知, 在方法执行之前执行
+	@After: 后置通知, 在方法执行之后执行 
+	@AfterRunning: 返回通知, 在方法返回结果之后执行
+	@AfterThrowing: 异常通知, 在方法抛出异常之后
+	@Around: 环绕通知, 围绕着方法执行
+	
+	1 在方法加入注解
+	@xxx(execution public * ArithmeticCalculator.*(..))
+	2 给该方法参数添加（JionPoint jionPoint）
+		获取被执行方法的名字:jionPoint.getSignature().getName()
+		获取被执行方法的参数:jionPoint.getArgs()
+	

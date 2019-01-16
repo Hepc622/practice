@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hniu.surveypark.model">
+	<class name="Right" table="rights">
+		<id name="right_id" column="right_id" type="java.lang.Integer">
+			<generator class="identity"></generator>
+		</id>
+		<property name="right_name" column="right_name" type="java.lang.String"></property>
+
+		<property name="right_url" column="right_url" type="java.lang.String"></property>
+
+		<property name="right_desc" column="right_desc" type="java.lang.String"></property>
+
+		<property name="right_code" column="right_code" type="java.lang.Long"
+			update="false"></property>
+
+		<property name="right_pos" column="right_pos" type="java.lang.Integer"
+			update="false"></property>
+
+		<property name="right_open" column="right_open" type="java.lang.Boolean" />
+	</class>
+</hibernate-mapping>

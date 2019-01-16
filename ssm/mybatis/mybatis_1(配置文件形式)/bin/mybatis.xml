@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- 这个些头我也不记得我是到官方文档复制来的-->
+<configuration><!-- 这是mybatis的配置，我们的配置都写在这里面 -->
+  <properties resource="jdbc.properties"/>
+  <!--properties标签用于 引入properties文件，在下面属性中我们要引用到properties中的内容 -->  
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/><!-- 事务管理 -->
+      <dataSource type="POOLED"><!-- 数据源 -->
+        <property name="driver" value="${jdbc.driverClass}"/>
+        <!-- 指定哪一个驱动 ，从properties中引用-->
+        <property name="url" value="${jdbc.url}"/>
+        <!-- 指定哪一个链接url -->
+        <property name="username" value="${jdbc.user}"/>
+        <!-- 指定哪一个链接用户 -->
+        <property name="password" value="${jdbc.password}"/>
+        <!-- 指定哪一个链接密码 -->
+      </dataSource>
+    </environment>
+  </environments>
+  <!-- 注册映射关系文件 -->
+  <mappers>
+  	<!-- 以mapper的形式将指定的映射文件关联进来 -->
+  	<mapper resource="com/home/entity/userMapper.xml"/> 
+  </mappers>
+</configuration>

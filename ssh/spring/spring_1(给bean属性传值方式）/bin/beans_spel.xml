@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	<bean id="car" class="com.hniu.spring.beans.spel.Car">
+		<property name="brand" value="#{'audi'}"></property>
+		<property name="price" value="#{8*10000}"></property>
+		<property name="pi" value="#{T(java.lang.Math).PI * 90}"></property>
+	</bean>
+	<bean id="addr" class="com.hniu.spring.beans.spel.Address">
+		<property name="city" value="#{'郴州'}"></property>
+	</bean>
+	<bean id="person" class="com.hniu.spring.beans.spel.Person">
+		<!-- 使用spel表达式,只要在#{}之内的都会被认为是spel表达式 -->
+		<property name="name" value="#{'hpc'}"></property>
+		<!-- 使用spel表达式引用对象 -->
+		<property name="car" value="#{car}"></property>
+		<!-- 使用spel表达式引用对象的属性 -->
+		<property name="address" value="#{addr.city}"></property>
+		<!-- 使用spel表达式引用对象的方法 -->
+		<property name="carInfo" value="#{car.toString()}"></property>
+		<!-- 使用spel表达式判断语法 -->
+		<property name="carLevel" value="#{car.price>300000 ? '高级':'中级'}"></property>
+	</bean>
+</beans>

@@ -1,0 +1,18 @@
+#默认创建的eurekaserver为client端，需要指定eureka下的client的registerWithEureka，fetchRegistry为false才行
+#registerWithEureka: false 不需要再注册服务器中显示
+#fetchRegistry: false
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+#    用于client端发送心跳包的service  url
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+spring:
+  devtools:
+      restart:
+        enabled: true

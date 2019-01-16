@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hniu.hibernate.subclass.bean">
+	<class name="Person" table="CLASS_INFO" discriminator-value="person">
+		<id name="id" column="ID" type="integer">
+			<generator class="native"></generator>
+		</id>
+		<!-- 添加一个区别者列  此类必须放在id列之后-->
+		<discriminator column="TEPY" type="string"></discriminator>
+		
+		<!-- 父类的属性 -->
+		<property name="name" column="NAME" type="string"></property>
+		<property name="age" column="AGE" type="integer"></property>
+		<property name="sex" column="SEX" type="boolean"></property>
+		
+		<!-- 映射继承类的属性 <subclass> -->
+		<subclass name="Student" discriminator-value="student">
+			<property name="clazz" column="CLAZZ" type="string"></property>
+		</subclass>
+	</class>
+</hibernate-mapping>

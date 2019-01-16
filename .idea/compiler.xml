@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="activemq" />
+        <module name="basics" />
+        <module name="card-game" />
+        <module name="chat" />
+        <module name="controller" />
+        <module name="dispersion" />
+        <module name="dispersion-lock" />
+        <module name="dispersion-lock-one" />
+        <module name="dispersion-lock-two" />
+        <module name="dispersion-transaction-manager" />
+        <module name="dispersion-transaction-one" />
+        <module name="dispersion-transaction-two" />
+        <module name="dubbo" />
+        <module name="interview" />
+        <module name="java-se" />
+        <module name="mybatis" />
+        <module name="rabbitmq" />
+        <module name="rabbitmq-common" />
+        <module name="rabbitmq-one" />
+        <module name="rabbitmq-two" />
+        <module name="service" />
+        <module name="serviceimpl" />
+        <module name="spring-cloud" />
+        <module name="ssh" />
+        <module name="ssm" />
+        <module name="web-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aa" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="activemq" options="-parameters" />
+      <module name="dispersion-lock" options="" />
+      <module name="dispersion-lock-one" options="-parameters" />
+      <module name="dispersion-lock-two" options="-parameters" />
+      <module name="dispersion-transaction-manager" options="-parameters" />
+      <module name="rabbitmq-one" options="-parameters" />
+      <module name="rabbitmq-two" options="-parameters" />
+    </option>
+  </component>
+</project>

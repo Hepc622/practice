@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	<bean id="car" class="com.hniu.spring.beans.cycle.Car" p:brand="audi"
+	destroy-method="destroy" init-method="init"></bean>
+	<!-- 配置beanpostProcessor 只要配置不用分配id，ioc容器会自动识别
+		BeanPostProcessor的对象的两个方法
+			Object postProcessAfterInitialization(Object arg0, String arg1)
+				在初始化之后会调用这个方法，也就是说可以更改返回的对象
+			Object postProcessBeforeInitialization(Object arg0, String arg1)
+				在初始化之前会调用这个方法
+	-->
+	<bean class="com.hniu.spring.beans.cycle.MyBeanPostProcessor"></bean>
+</beans>

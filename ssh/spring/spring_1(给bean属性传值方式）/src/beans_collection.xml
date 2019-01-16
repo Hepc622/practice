@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	<!-- 使用构造方式给bean属性赋值 -->
+	<bean id="phone"  class="com.hniu.spring.beans.collection.Phone">
+		<constructor-arg value="4.5"></constructor-arg>
+		<constructor-arg value="安卓"></constructor-arg>
+		<constructor-arg value="2000.0"></constructor-arg>
+		<constructor-arg>
+			<value><![CDATA[第一款智能手机(⊙o⊙)…]]></value>
+		</constructor-arg>
+	</bean>
+
+	<!-- 使用属性对bean属性赋值 -->
+	<bean id="phone2" class="com.hniu.spring.beans.collection.Phone">
+		<property name="screenSize" value="5.5"></property>
+		<property name="brand" value="小米"></property>
+		<property name="price" value="1000.0"></property>
+		<property name="introduce">
+			<value><![CDATA[一款全智能手机(⊙o⊙)…]]></value>
+		</property>
+	</bean>
+	<!-- 声明配置属性的 bean -->
+	<util:properties id="pro">
+		<prop key="userName">root</prop>
+		<prop key="password">123</prop>
+	</util:properties>
+	<!-- 声明set集合类型的 bean -->
+	<util:set id="phoneCollectionSet">
+		<ref bean="phone" />
+		<ref bean="phone2" />
+		<bean class="com.hniu.spring.beans.collection.Phone">
+			<property name="screenSize" value="8"></property>
+			<property name="brand" value="Apple"></property>
+			<property name="price" value="7000.0"></property>
+			<property name="introduce">
+				<value><![CDATA[一款全智能平板电脑(⊙o⊙)…]]></value>
+			</property>
+		</bean>
+	</util:set>
+	<!-- 声明map集合类型的 bean -->
+	<util:map id="phoneCollectionMap">
+		<entry key="phoneOne" value-ref="phone"></entry>
+		<entry key="phoneTwo" value-ref="phone2"></entry>
+		<entry key="phoneThree" >
+			<bean class="com.hniu.spring.beans.collection.Phone" >
+				<property name="screenSize" value="8"></property>
+				<property name="brand" value="Apple"></property>
+				<property name="price" value="7000.0"></property>
+				<property name="introduce">
+					<value><![CDATA[一款全智能平板电脑(⊙o⊙)…]]></value>
+				</property>
+			</bean>
+		</entry>
+	</util:map>
+	<!-- set集合bean的赋值 -->
+	<bean id="personSet" class="com.hniu.spring.beans.collection.Person" >
+		<property name="name" value="张三"></property>
+		<property name="sex" value="男"></property>
+		<property name="age" value="21"></property>
+		<property name="phone" ref="phoneCollectionSet">
+			<!-- <list>
+				<ref bean="phone" />
+				<ref bean="phone2" />
+				<bean class="com.hniu.spring.beans.collection.Phone">
+					<property name="screenSize" value="8"></property>
+					<property name="brand" value="Apple"></property>
+					<property name="price" value="7000.0"></property>
+					<property name="introduce">
+						<value><![CDATA[一款全智能平板电脑(⊙o⊙)…]]></value>
+					</property>
+				</bean>
+			</list> -->
+			<!-- <set>
+				<ref bean="phone" />
+				<ref bean="phone2" />
+				使用内部bean对bean属性赋值
+				<bean class="com.hniu.spring.beans.collection.Phone">
+					<property name="screenSize" value="8"></property>
+					<property name="brand" value="Apple"></property>
+					<property name="price" value="7000.0"></property>
+					<property name="introduce">
+						<value><![CDATA[一款全智能平板电脑(⊙o⊙)…]]></value>
+					</property>
+				</bean>
+			</set> -->
+		</property>
+	</bean>
+	<!-- Map集合bean的赋值 -->
+	<bean id="personMap" class="com.hniu.spring.beans.collection.Person">
+		<property name="name" value="李四"></property>
+		<property name="sex" value="男"></property>
+		<property name="age" value="27"></property>
+		<property name="phoneMap" ref="phoneCollectionMap"></property>
+	</bean>
+	<!-- P命名空间赋值 -->
+	<bean id="pNameSpace" class="com.hniu.spring.beans.collection.Person"
+		p:name="王五" p:sex="男" p:age="25" p:phoneMap-ref="phoneCollectionMap">
+	</bean>
+</beans>

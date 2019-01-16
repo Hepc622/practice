@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.home.entity.studentMapper"><!-- 命名空间，一定要是唯一的，只有这样才能定位到这个文件来 -->
+	<!-- 多对一查询（多个学生对应一个老师） -->
+	<!-- select的属性
+		id：这个查找标签的唯一标识，通过id找到这条sql语句
+		parameterType：传进来的参数类型
+		resultMap：这条语句执行完，以什么形式返回结果集
+	 -->
+	<select id="loadStudent" parameterType="int" resultMap="studentMap">
+		select *
+		from students as s join teachers as t
+		on t.teacher_id=s.student_teacher
+		where s.student_id=#{id}
+	</select>
+	<!-- 学生对象映射关系 -->
+	<!--resultMap的属性
+		type：以这个类型进行封装返回
+		id：找到该resultMap标签的唯一标识
+		resultMap的内部的标签介绍
+		<id>专门用于映射主键的
+		<result>普通属性映射
+		<collection>集合属性映射
+		<association>关系映射(1-1,1-n,n-1,n-n)
+		<constructor>专门用于映射构造函数的标签
+		<discriminator>鉴别器非常容易理 解,因为它的表现很像 Java 语言中的 switch 语句。
+	-->
+	<resultMap type="student" id="studentMap" >
+		<!-- 主键映射 -->
+		<id property="student_id" column="student_id" javaType="int"/>
+		<!-- 普通属性映射 -->
+		<!--  
+		property：映射在这个属性上
+		column：以这个列上的为参照
+		javaType：以什么类型映射
+		-->
+		<result property="student_name" column="student_name" javaType="String"/>
+		<result property="student_number" column="student_number" javaType="int"/>
+		<!-- 关联关系映射 -->
+		<association property="student_teacher" column="teacher_id" resultMap="teacherMap"/>
+	</resultMap>
+	<!-- 学生对象映射关系 -->
+	<resultMap type="teacher" id="teacherMap">
+		<id property="teacher_id" column="teacher_id" javaType="int"/>
+		<result property="teacher_name" column="teacher_name" javaType="String"/>
+		<result property="teacher_number" column="teacher_number" javaType="int"/>
+	</resultMap>
+</mapper>

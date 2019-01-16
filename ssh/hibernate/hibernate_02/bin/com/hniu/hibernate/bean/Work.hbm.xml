@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hniu.hibernate.bean">
+	<class name="Work" table="work">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="userName" column="userName"></property>
+		<component name="pay" class="Pay">
+			<parent name="work"/>
+			<property name="monthSalary" column="monthSalary"></property>
+			<property name="yearSalary" column="yearSalary"></property>
+			<property name="holidaySalary" column="holidaySalary"></property>
+		</component>
+	</class>
+</hibernate-mapping>

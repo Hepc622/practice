@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	<!-- 通过静态工厂来配置bean，注意不是配置静态工厂实例，而是配置bean实例 -->
+	<!-- class:指向静态工厂类
+		 factory—method:指向静态工厂方法
+		 constructor-arg value :用来携带静态工厂传值 -->	
+	<bean id="factory" class="com.hniu.spring.beans.factory.FactoryStaticGetBean" factory-method="getCar">
+		<constructor-arg value="audi"></constructor-arg>
+	</bean>
+	
+	<!-- 配置工厂实例 -->
+	<bean id="instanceFactory" class="com.hniu.spring.beans.factory.FactoryInstanceGetBean"></bean>
+	
+	<!-- 通过实例工厂来获取bean -->
+	<bean id="car" factory-bean="instanceFactory" factory-method="getCar">
+		<constructor-arg value="ford"></constructor-arg>
+	</bean>
+</beans>

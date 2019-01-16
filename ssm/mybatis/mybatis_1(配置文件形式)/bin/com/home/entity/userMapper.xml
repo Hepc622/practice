@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper的namespace属性一定是唯一的（包名+文件名 就可以了） -->
+<mapper namespace="com.home.entity.userMapper">
+	<!-- select标签是一个mybatis的查询标签 
+		属性： 
+		id:要是唯一的不能有重复，因为mybatis通过它来找到所写语句 
+		parameterType:查询语句需要的参数，这里也就是指#{id}中的id类型 
+		resultType:数据库查询结果以什么类型返回 -->
+	<select id="loadUser" parameterType="int" resultType="com.home.entity.User">
+		<!-- 这是我们的查询语句 -->
+		select *
+		from users
+		where user_id=#{user_id}
+		<!--#{id}是我们要查询是传入的参数 -->
+	</select>
+</mapper>

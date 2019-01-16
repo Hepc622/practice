@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- 连接接数据库 -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">123</property>
+		<property name="hibernate.connection.url">jdbc:mysql:///user</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 每次更新表 -->
+		<property name="hbm2ddl.auto">update</property>
+		<!-- 显示sql语句 -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<!-- c3p0连接池 -->
+		<property name="c3p0.max_size">20</property>
+		<property name="c3p0.max_min">1</property>
+		<property name="c3p0.timeout">3000</property>
+		<property name="c3p0.acquire_increment">5</property>
+		<!-- 每隔多久检查一个连接上是否超时 -->
+		<property name="c3p0.idle_test_period">4000</property>
+
+		<!-- 每次在数据库中读取多少条数据，值越大访问次数越少，web资源消耗越多，值越小访问次数越多，web资源消耗越小 -->
+		<property name="hibernate.jdbc.fetch_size">100</property>
+		<!-- 批处理 -->
+		<property name="hibernate.jdbc.batch_size">30</property>
+
+		<!-- 关联映射文件 -->
+		<mapping resource="com/hniu/hibernate/bean/one2more/Customer.hbm.xml" />
+		<mapping resource="com/hniu/hibernate/bean/one2more/Order.hbm.xml" />		<!-- 关联映射文件双向 1-n -->
+		<!-- <mapping resource="com/hniu/hibernate/bean/one2more/both/Customer.hbm.xml" 
+			/> <mapping resource="com/hniu/hibernate/bean/one2more/both/Order.hbm.xml" 
+			/> -->	<!-- 关联映射文件 1-n -->
+		<!-- <mapping resource="com/hniu/hibernate/bean/News.hbm.xml" /> <mapping 
+			resource="com/hniu/hibernate/bean/Work.hbm.xml" /> -->
+
+	</session-factory>
+</hibernate-configuration>

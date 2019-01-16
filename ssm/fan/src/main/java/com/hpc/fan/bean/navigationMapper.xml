@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper的namespace属性一定是唯一的（包名+文件名 就可以了） -->
+<mapper namespace="com.hpc.fan.dao.NavigationDao">
+	<resultMap type="navigation" id="navigationMap">
+		<id column="navigation_id" property="navigation_id" />
+		<result column="navigation_img" property="navigation_img" />
+		<result column="navigation_url" property="navigation_url" />
+		<result column="navigation_name" property="navigation_name" />
+		<result column="navigation_english" property="navigation_english" />
+	</resultMap>
+
+	<select id="getNavigationEntity" parameterType="int" resultMap="navigationMap">
+		select *
+		from navigations n
+		where
+		n.navigation_id=#{id}
+	</select>
+	<select id="getAllNavigationEntity" parameterType="navigation"
+		resultMap="navigationMap">
+		select *
+		from navigations
+	</select>
+</mapper>

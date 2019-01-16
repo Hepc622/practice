@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.home.entity.teacherMapper">
+	<!-- teacher sql -->
+	<select id="loadTeacher" parameterType="int" resultMap="teacherMapper">
+		select *
+		from teachers as t join students as s
+		on s.student_teacher=t.teacher_id
+		where teacher_id=#{teacher_id}
+	</select>
+	<resultMap type="teacher" id="teacherMapper">
+		<id property="teacher_id" column="teacher_id" />
+		<result property="teacher_name" column="teacher_name" />
+		<result property="teacher_number" column="teacher_number" />
+		<collection property="teacher_student" ofType="student">
+			<id property="student_id" column="student_id" />
+			<result property="student_name" column="student_name"
+				javaType="String" />
+			<result property="student_number" column="student_number"
+				javaType="int" />
+		</collection>
+	</resultMap>
+</mapper>

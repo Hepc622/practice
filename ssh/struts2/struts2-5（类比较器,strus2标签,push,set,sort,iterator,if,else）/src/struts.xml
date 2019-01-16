@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="ognl" extends="struts-default">
+		<action name="practice-*" class="com.hniu.practice.LoginAction"
+			method="{1}">
+			<result name="{1}">/{1}-login.jsp</result>
+		</action>
+		<action name="*_*" class="com.hniu.ognl.{1}" method="{2}">
+			<result name="{2}">/WEB-INF/ognl/{2}.jsp</result>
+		</action>
+	</package>
+</struts>

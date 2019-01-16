@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.user">root</property>
+		<property name="connection.password">123</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql:///user</property>
+		<!-- Hibernate 连接数据库的基本信息 -->
+
+		<!-- 设置连接池 -->
+		<property name="hibernate.c3p0.max_size">20</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+
+		<!-- 配置数据库的方言 可以在hibernate.properties文件中查看相关的方言 -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 指定生成表的方式 update在原先的表中进行更新，create每次将重新创建一张表，覆盖啊之前的 -->
+		<property name="hbm2ddl.auto">update</property>
+
+		<!-- 是不显示sql语句 -->
+		<property name="show_sql">true</property>
+		<!-- 是否指定格式显示sql语句 -->
+		<property name="format_sql">true</property>
+
+		<!-- 指定关系映射文件 -->
+		<mapping resource="com/hniu/hibernate/bean/user.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

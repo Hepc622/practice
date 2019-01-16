@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper的namespace属性一定是唯一的（包名+文件名 就可以了） -->
+<mapper namespace="com.hpc.fan.dao.ContextDao">
+	<resultMap type="context" id="contextMap">
+		<id column="context_id" property="context_id" />
+		<result column="context_text" property="context_text" />
+		<result column="context_img" property="context_img" />
+		<result column="context_date" property="context_date" />
+		<result column="context_title" property="context_title" />
+		<!-- 连表查询 -->
+		<association column="parent_title" property="parent_title"
+			javaType="title">
+			<id column="title_id" property="title_id" />
+			<result column="title_name" property="title_name" />
+			<result column="title_url" property="title_url" />
+			<result column="title_type" property="title_type" />
+		</association>
+	</resultMap>
+	<select id="getContextCount" parameterType="int" resultType="int">
+		SELECT COUNT("id") count
+		FROM contexts c
+		WHERE c.parent_id=#{id}
+	</select>
+
+	<select id="getContextBeforeOrAfter" resultMap="contextMap">
+		SELECT
+		*
+		FROM
+		contexts c
+		LEFT JOIN titles s ON s.title_id = c.parent_id
+		WHERE c.parent_id=#{pid} and
+		<choose>
+			<when test="flag == 2">
+				c.context_id &gt; #{cid}
+				ORDER BY
+				c.context_id ASC
+				LIMIT 1
+			</when>
+			<when test="flag == 1">
+				c.context_id &lt; #{cid}
+				ORDER BY
+				c.context_id DESC
+				LIMIT 1
+			</when>
+		</choose>
+	</select>
+
+	<select id="getContextEntity" parameterType="int" resultMap="contextMap">
+		SELECT
+		*, c.context_id
+		FROM
+		contexts c
+		LEFT JOIN titles s ON s.title_id =
+		c.parent_id
+		WHERE
+		<choose>
+			<when test="first">
+				c.parent_id = #{id}
+				ORDER BY
+				c.context_id DESC
+				LIMIT 1;
+			</when>
+			<otherwise>
+				c.context_id=#{id}
+			</otherwise>
+		</choose>
+
+	</select>
+	<select id="getAllContextEntity" parameterType="int" resultMap="contextMap">
+		SELECT
+		*,t.context_id
+		FROM
+		contexts t
+		LEFT JOIN titles s
+		ON
+		s.title_id=t.parent_id
+		WHERE
+		t.parent_id = #{context_id} ORDER BY
+		context_id
+		DESC LIMIT #{begin},#{everypage}
+	</select>
+
+	<select id="updateContextEntity" parameterType="context"
+		resultType="integer">
+	</select>
+	<select id="deleteContextEntity" parameterType="int" resultType="integer">
+		delete
+		from contexts
+		where context_id=#{id}
+	</select>
+
+	<select id="saveContextEntity" parameterType="context"
+		resultType="integer">
+		INSERT INTO contexts
+		VALUES(null,#{context_title},#{context_img},#{context_text},#{context_date},#{parent_title.title_id})
+	</select>
+</mapper>

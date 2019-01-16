@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper的namespace属性一定是唯一的（包名+文件名 就可以了） -->
+<mapper namespace="com.hpc.fan.dao.TitleDao">
+	<resultMap type="title" id="titleMap">
+		<id column="title_id" property="title_id" />
+		<result column="title_name" property="title_name" />
+		<result column="title_url" property="title_url" />
+		<result column="title_type" property="title_type" />
+	</resultMap>
+	<select id="getTitleEntity" parameterType="int" resultMap="titleMap">
+		select *
+		from titles t
+		where t.title_id=#{title_id}
+	</select>
+	<select id="getAllTitleEntity" parameterType="int" resultMap="titleMap">
+		select *,title_id
+		from titles t
+		where t.parent_id=#{id} ORDER BY
+		title_id
+	</select>
+</mapper>

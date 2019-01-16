@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	<!--bean的作用域可以通过scope属性来设置它的作用域
+		singleton:默认模式。为单例模式，在ioc容器初始化时的时候只创建一次bean,在每次请求的时候就不在创建
+		prototype:原型模式。在ioc容器初始化时并不创建bean，而是在每次获取的时候进行创建并返回 -->
+	<bean id="person" class="com.hniu.spring.beans.scope.Person"
+		p:name="hpc" p:sex="男" scope="prototype" />
+</beans> 

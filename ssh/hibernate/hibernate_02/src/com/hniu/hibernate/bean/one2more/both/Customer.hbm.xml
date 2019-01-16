@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hniu.hibernate.bean.one2more.both">
+	<class name="Customer" table="CUSTOMERS">
+		<id name="id" column="CUSTOMERS_ID">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" column="CUSTOMERS_NAME"></property>
+		
+	  	<!-- 
+	  	<set></set>
+	  	想要删除一个被引用的对象，就要在级联对象中设置一个cascade="delete",这样才能进行删除
+	  		<set cascade="delete">
+	  			和这对象关联的所有级联对象删除
+	  		<set cascade="delete-orphan">
+	  			删除所有关联的子对象
+	  		<set cascade="save-update">
+	  			级联插入，随着1的一端进行插入，一般在开发中不这么使用，建议手动插入 
+	  		<Set inverse="true"></set>
+	  			对象之间的关联关系的维护，会使sql语句的增多，我们可以使其1的一方放弃关系维护，交给多的一
+	  		<set order-by="列表名 排序顺序">
+	  			排序是以set属性在表中对应的列名 ，升序DESC或者降序ASC
+	  	-->
+		<set name="orders" table="ORDERS" inverse="true" cascade="save-update" order-by="ORDERS_NAME DESC">
+			<key column="CUSTOMERS_ID"></key>
+			<one-to-many class="Order" />
+		</set>
+	</class>
+</hibernate-mapping>

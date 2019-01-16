@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hniu.hibernate.bean.one2more">
+	<class name="Order" table="Orders"><!-- 不要使用order这个作为表名，否则会出错 -->
+		<id name="id" column="ORDER_ID">
+			<generator class="native"></generator>
+		</id>
+		<property name="orderName" column="ORDER_NAME"></property>
+		<!-- 设置关系映射多对一 name 这里是指1的一端的属性名字 class 是指1的一端的实体类型 column 是指在这张表中建立一个外键 -->
+		<many-to-one name="customer" class="Customer" column="CUSTOMER_ID" />
+	</class>
+</hibernate-mapping> 

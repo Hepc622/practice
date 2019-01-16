@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+	<context:component-scan base-package="com.home.springmvc.*" />
+	<!-- jsp视图解析器，若jsp页面使用了jstl就会见internalResourceView转换成jstlView -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- this internationalization bean -->
+	<!-- <bean class="org.springframework.context.support.ResourceBundleMessageSource">
+		seting basename property
+		<property name="basename" value="i18n"></property>
+	</bean>
+	<mvc:view-controller path="/" view-name="springmvcInternationalization/success"/>
+	<mvc:annotation-driven></mvc:annotation-driven> -->
+</beans>

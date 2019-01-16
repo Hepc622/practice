@@ -1,0 +1,32 @@
+这个实在不使用web.xml的情况下所需要做的配置
+
+
+1 创建一个类继承WebSecurityConfigurerAdapter
+	等同于spring-security.xml
+		<http auto-config="true">
+			<intercept-url pattern="/admin**" access="ROLE_ADMIN" />
+			<intercept-url pattern="/dba**" access="ROLE_ADMIN,ROLE_DBA" />
+		</http>
+	
+		<authentication-manager>
+		  <authentication-provider>
+		    <user-service>
+			<user name="yiibai" password="123456" authorities="ROLE_USER" />
+			<user name="admin" password="123456" authorities="ROLE_ADMIN" />
+			<user name="dba" password="123456" authorities="ROLE_DBA" />
+		    </user-service>
+		  </authentication-provider>
+		</authentication-manager>
+		
+2 创建一个类继承AbstractSecurityWebApplicationInitializer
+	等同于在web.xml中注册的filter获取器
+		<filter>
+			<filter-name>springSecurityFilterChain</filter-name>
+			<filter-class>org.springframework.web.filter.DelegatingFilterProxy
+	                </filter-class>
+		</filter>
+	
+		<filter-mapping>
+			<filter-name>springSecurityFilterChain</filter-name>
+			<url-pattern>/*</url-pattern>
+		</filter-mapping>

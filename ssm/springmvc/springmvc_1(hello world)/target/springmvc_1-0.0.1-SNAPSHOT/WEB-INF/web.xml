@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<!-- 配置springmvc核心的servlet  DispatherServlet -->
+	<servlet>
+		<servlet-name>helloSpringmvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- 如果不加以初始化，默认指定的配置文件位置
+			是/web-inf/<servlet-name>-servlet.xml（helloSpringmvc-servlet.xml）
+		 -->
+	<!-- 	<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:helloSpringmvc.xml</param-value>
+		</init-param> -->
+		<!-- 加载顺序，这里我们设置成第一个 -->
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>helloSpringmvc</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+</web-app>

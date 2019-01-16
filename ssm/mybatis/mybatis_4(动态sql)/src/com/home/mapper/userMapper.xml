@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.home.mapper">
+	<!-- mybatis中的动态标签和struts，JSTL标签十分相似，如果学习过的话，很容易就理解了 -->
+	<select id="loadUser" resultType="user" parameterType="user">
+		<!-- 如果user_id 等于4 就执行这条sql语句,
+			test中的是实体类的属性，是通过反射获取出来的，
+			所以我们这里传进来的参数是一个实体类对象 -->
+		<if test="user_id == 4">
+			select *
+			from users u
+			where u.user_id=#{user_id}
+		</if>
+		<!-- 如果user_id不等于空和不等于4 就进入这一个，
+			逻辑运算符 
+				and,or 
+				==,!= 
+				>,>=　
+				<,<= ...等
+				-->
+		<if test="user_id != null and user_id !=4">
+			<!-- choose相当于java中的switch -->
+			<choose>
+				<!-- when 相当于case -->
+				<!-- 只有当user_id不等于空的时候才查找对应的user信息 -->
+				<when test="user_id > 4">
+					select *
+					from users u
+					where u.user_id=#{user_id}
+
+				</when>
+				<!-- 相当于default -->
+				<!-- 当user_id等于空就执行下面这条sql,查询名字为hpc的用户 -->
+				<otherwise>
+					select *
+					from users
+					where user_name='hpc'
+				</otherwise>
+			</choose>
+		</if>
+	</select>
+	<update id="updateUser" parameterType="user">
+		update users
+		<!-- 用于更新sql语句 -->
+		<set>
+			user_name=#{user_name},
+			user_pwd=#{user_pwd}
+		</set>
+		where user_id=#{user_id}
+	</update>
+	<insert id="insertUser" parameterType="list">
+		insert into users values
+		<!-- 循环标签 -->
+		<foreach collection="list" item="u" separator=",">
+			(null,#{u.user_name},#{u.user_pwd})
+		</foreach>
+	</insert>
+
+</mapper>
