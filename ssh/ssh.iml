@@ -3,7 +3,20 @@
   <component name="FacetManager">
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
+        <datasource-map>
+          <unit-entry name="SurveyManageSystem:build:classes:hibernate.cfg.xml" />
+          <unit-entry name="SurveyManageSystem:config:hibernate.cfg.xml" />
+          <unit-entry name="hibernate:hibernate_01:bin:hibernate.cfg.xml" />
+          <unit-entry name="hibernate:hibernate_01:src:hibernate.cfg.xml" />
+          <unit-entry name="hibernate:hibernate_02:bin:hibernate.cfg.xml" />
+          <unit-entry name="hibernate:hibernate_02:src:hibernate.cfg.xml" />
+          <unit-entry name="hibernate:hibernate_03:bin:hibernate.cfg.xml" />
+          <unit-entry name="hibernate:hibernate_03:src:hibernate.cfg.xml" />
+          <unit-entry name="spring:spring_4:bin:hibernate.cfg.xml" />
+          <unit-entry name="spring:spring_4:src:hibernate.cfg.xml" />
+          <unit-entry name="ssh（整合）:build:classes:hibernate.cfg.xml" />
+          <unit-entry name="ssh（整合）:conf:hibernate.cfg.xml" />
+        </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/SurveyManageSystem/build/classes/hibernate.cfg.xml" />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/SurveyManageSystem/config/hibernate.cfg.xml" />

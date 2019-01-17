@@ -40,8 +40,8 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>rabbitmq</groupId>
-            <artifactId>rabbotmq-common</artifactId>
+            <groupId>practices</groupId>
+            <artifactId>rabbitmq-common</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

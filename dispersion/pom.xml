@@ -10,9 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>dispersion</artifactId>
+    <packaging>pom</packaging>
     <modules>
-        <module>dispersion_transaction</module>
+        <module>dispersion-transaction</module>
         <module>dispersion-lock</module>
+        <module>dispersion-job</module>
     </modules>
 
 </project>

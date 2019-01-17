@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$/chat" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/dispersion/dispersion-lock" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dispersion/dispersion-job" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dispersion/dispersion-job/dispersion-job-core" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dispersion/dispersion-transaction" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-job" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mq/activemq" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/mq/rabbitmq/rabbitmq-one" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mq/rabbitmq/rabbitmq-two" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/config/config_client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/config/config_server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/eureka/eureka_client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/eureka/eureka_server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/hystrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/ribbon" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

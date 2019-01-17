@@ -10,43 +10,70 @@
         <module name="basics" />
         <module name="card-game" />
         <module name="chat" />
+        <module name="config" />
+        <module name="config_client" />
+        <module name="config_server" />
         <module name="controller" />
-        <module name="dispersion" />
+        <module name="dispersion-job" />
+        <module name="dispersion-job-core" />
         <module name="dispersion-lock" />
-        <module name="dispersion-lock-one" />
-        <module name="dispersion-lock-two" />
+        <module name="dispersion-transaction" />
         <module name="dispersion-transaction-manager" />
-        <module name="dispersion-transaction-one" />
-        <module name="dispersion-transaction-two" />
         <module name="dubbo" />
+        <module name="eureka" />
+        <module name="eureka_client" />
+        <module name="eureka_server" />
+        <module name="feign" />
+        <module name="hystrix" />
         <module name="interview" />
         <module name="java-se" />
         <module name="mybatis" />
+        <module name="mybatis-plus" />
         <module name="rabbitmq" />
         <module name="rabbitmq-common" />
         <module name="rabbitmq-one" />
         <module name="rabbitmq-two" />
+        <module name="ribbon" />
         <module name="service" />
         <module name="serviceimpl" />
         <module name="spring-cloud" />
         <module name="ssh" />
         <module name="ssm" />
+        <module name="tx-manager" />
         <module name="web-service" />
+        <module name="zookeeper_dubbo" />
+      </profile>
+      <profile name="Annotation profile for practices" enabled="true">
+        <sourceOutputDir name="../mybatisplusgenerator/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../mybatisplusgenerator/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mybatis-plus-generator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="aa" target="1.5" />
+      <module name="chat" target="6" />
+      <module name="dispersion-lock-one" target="1.8" />
+      <module name="dispersion-lock-two" target="1.8" />
+      <module name="dispersion-transaction-manager" target="1.5" />
+      <module name="dispersion-transaction-two" target="1.5" />
+      <module name="dispersion_transaction" target="1.8" />
+      <module name="mybatis-plus-generator" target="1.5" />
+      <module name="practices" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="activemq" options="-parameters" />
+      <module name="dispersion-job" options="" />
+      <module name="dispersion-job-core" options="" />
       <module name="dispersion-lock" options="" />
       <module name="dispersion-lock-one" options="-parameters" />
       <module name="dispersion-lock-two" options="-parameters" />
-      <module name="dispersion-transaction-manager" options="-parameters" />
-      <module name="rabbitmq-one" options="-parameters" />
-      <module name="rabbitmq-two" options="-parameters" />
+      <module name="dispersion-transaction" options="" />
+      <module name="dispersion-transaction-manager" options="" />
+      <module name="eureka_client" options="-parameters" />
+      <module name="rabbitmq-one" options="" />
+      <module name="rabbitmq-two" options="" />
     </option>
   </component>
 </project>

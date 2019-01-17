@@ -18,7 +18,6 @@
         <module>dubbo</module>
         <module>web-service</module>
         <module>java-se</module>
+        <module>dispersion</module>
     </modules>
-
-
 </project>

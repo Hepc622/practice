@@ -51,16 +51,6 @@
 			<artifactId>activemq-all</artifactId>
 			<version>5.15.8</version>
 		</dependency>
-		<dependency>
-			<groupId>groupId</groupId>
-			<artifactId>common</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-        <dependency>
-            <groupId>com.home.practive</groupId>
-            <artifactId>client-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
 	<dependencyManagement>

@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import com.home.practive.vo.MemberUser;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,13 +20,13 @@ public class EurekaClientApplication {
 	@Value("${server.port}")
 	String port;
 
-	@RequestMapping(value = "/hello",method = RequestMethod.GET)
-	public MemberUser say_hello(){
-		MemberUser user = new MemberUser();
-		user.setId("1");
-		user.setName("hpc");
-		user.setMsg(port.toString());
-		return user;
-	}
+//	@RequestMapping(value = "/hello",method = RequestMethod.GET)
+//	public MemberUser say_hello(){
+//		MemberUser user = new MemberUser();
+//		user.setId("1");
+//		user.setName("hpc");
+//		user.setMsg(port.toString());
+//		return user;
+//	}
 }
 

@@ -33,7 +33,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/dubbo/pom.xml" />
         <option value="$PROJECT_DIR$/java-se/pom.xml" />
         <option value="$PROJECT_DIR$/mq/pom.xml" />
@@ -48,9 +47,16 @@
         <option value="$PROJECT_DIR$/java-se/Basics/pom.xml" />
         <option value="$PROJECT_DIR$/mq/activemq/pom.xml" />
         <option value="$PROJECT_DIR$/dispersion/pom.xml" />
-        <option value="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/pom.xml" />
-        <option value="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two/pom.xml" />
         <option value="$PROJECT_DIR$/dispersion/dispersion-lock/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud/eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud/config/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud/config/config_server/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud/config/config_client/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud/eureka/eureka_client/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud/eureka/eureka_server/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis/mybatisplusgenerator/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis/mybatis-plus/pom.xml" />
+        <option value="$PROJECT_DIR$/dispersion/dispersion-job/dispersion-job-core/pom.xml" />
       </list>
     </option>
   </component>
