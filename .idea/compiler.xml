@@ -54,7 +54,6 @@
       <module name="chat" target="6" />
       <module name="dispersion-lock-one" target="1.8" />
       <module name="dispersion-lock-two" target="1.8" />
-      <module name="dispersion-transaction-manager" target="1.5" />
       <module name="dispersion-transaction-two" target="1.5" />
       <module name="dispersion_transaction" target="1.8" />
       <module name="mybatis-plus-generator" target="1.5" />

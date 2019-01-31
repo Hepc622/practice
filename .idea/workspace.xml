@@ -2,327 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfaa8656-91d8-48d7-8d5d-fbfe0436cdff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/build/package.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/RestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/ServletInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/TxManagerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/api/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/api/controller/TxManagerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/api/service/ApiAdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/api/service/ApiModelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/api/service/ApiTxManagerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/api/service/impl/ApiAdminServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/api/service/impl/ApiModelServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/api/service/impl/ApiTxManagerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/compensate/dao/CompensateDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/compensate/dao/impl/CompensateDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/compensate/model/TransactionCompensateMsg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/compensate/model/TxModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/compensate/service/CompensateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/compensate/service/impl/CompensateServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/config/ConfigReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/framework/utils/SocketManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/framework/utils/SocketUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/listener/ApplicationStartListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/listener/ServerListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/listener/service/InitService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/listener/service/impl/InitServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/manager/ModelInfoManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/manager/service/LoadBalanceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/manager/service/MicroService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/manager/service/TxManagerSenderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/manager/service/TxManagerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/manager/service/impl/LoadBalanceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/manager/service/impl/MicroServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/manager/service/impl/TxManagerSenderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/manager/service/impl/TxManagerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/model/ChannelSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/model/LoadBalanceInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/model/ModelInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/model/ModelName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/model/TxServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/model/TxState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/handler/TxCoreServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/model/TxGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/model/TxInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/IActionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/NettyServerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/NettyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionATGServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionCGServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionCKGServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionCServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionCTGServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionGLBServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionHServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionPLBServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionRGServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionTServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionUMIServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/BaseSignalTaskService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/NettyServerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/NettyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/redis/JedisClusterConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/redis/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/redis/RedisProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/redis/service/RedisServerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/redis/service/impl/RedisServerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/log.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/model.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/bootstrap/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/common/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/common/http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/common/jbase64.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/jquery/jquery-2.2.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/jquery/jquery.blockUI-css.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/jquery/jquery.blockUI.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/jquery/jquery.form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/log.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/static/static/model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud/config/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud/eureka/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/target/classes/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/target/classes/redis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/target/classes/spring-app.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/target/classes/spring-mvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/target/classes/spring-mybatis.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat/target/classes/spring-security.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/src/main/java/com/example/dispersion/lock/one/DispersionLockOneApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/src/test/java/com/example/dispersion/lock/one/DispersionLockOneApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two/src/main/java/com/example/dispersion/lock/two/DispersionLockTwoApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-two/src/test/java/com/example/dispersion/lock/two/DispersionLockTwoApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion-lock/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dispersion/dispersion-lock/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/TxManagerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/TxManagerInitialization.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/config/MyRpcConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/config/RedisConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/config/TxManagerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/context/DTXTransaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/context/DTXTransactionContext.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/context/SimpleDTXTransaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/context/SimpleTransactionManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/context/TransactionManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/group/GroupRelationship.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/group/TransUnit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/group/TransactionUnit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/message/HashGroupRpcCmdHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/message/ManagerRpcExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/message/MessageCreator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/message/RpcCmdTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/message/RpcExceptionHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/message/RpcExecuteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/message/ServerRpcAnswer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/message/TransactionCmd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/transaction/AskTransactionStateExecuteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/transaction/CreateGroupExecuteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/transaction/InitClientService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/transaction/JoinGroupExecuteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/transaction/NotifyGroupExecuteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/core/transaction/WriteTxExceptionExecuteService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/db/ManagerStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/db/domain/TxException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/db/mapper/TxExceptionMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/db/redis/RedisGroupRelationship.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/db/redis/RedisManagerStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/db/redis/RedisSetManagerStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/db/redis/RedisTokenStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/ManagerRpcBeanHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/TxManagerManagerRefreshing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/AdminController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/RedirectController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/TxManagerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/auth/DefaultTokenStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/auth/TxManagerAdminAuthLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/auth/sauth/DefaultSAuthLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/auth/sauth/InterceptorConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/auth/sauth/SAuthConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/auth/sauth/SAuthHandleException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/auth/sauth/SAuthLogic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/auth/sauth/token/TokenInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/auth/sauth/token/TokenStorage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/model/DTXInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/model/ErrorResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/model/ExceptionInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/model/ExceptionList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/model/Token.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/model/TxLogList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/model/TxManagerInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/restapi/model/TxManagerLog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/service/AdminService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/service/ManagerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/service/TxExceptionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/service/WriteTxExceptionDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/service/impl/AdminServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/service/impl/ManagerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/service/impl/TxExceptionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/txex/AsyncTxExceptionListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/txex/TxExceptionListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/java/com/codingapi/txlcn/manager/support/txex/provider/DefaultExUrlProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/application-lorne.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/application-second.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/application-ujued.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/static/admin/assets/8c382430f673ad2237bbf19e5c8a4b00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/static/admin/assets/c31278383b5623a8065aff89a3468b0c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/static/admin/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/static/admin/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/static/admin/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/static/admin/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/src/main/resources/tx-manager.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/application-lorne.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/application-second.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/application-ujued.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/TxManagerApplication$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/TxManagerApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/TxManagerInitialization.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/config/MyRpcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/config/TxManagerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/context/DTXTransaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/context/DTXTransactionContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/context/SimpleDTXTransaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/context/SimpleTransactionManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/context/TransactionManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/group/GroupRelationship.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/group/TransUnit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/group/TransactionUnit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/message/HashGroupRpcCmdHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/message/ManagerRpcExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/message/MessageCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/message/RpcCmdTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/message/RpcExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/message/RpcExecuteService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/message/ServerRpcAnswer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/message/TransactionCmd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/transaction/AskTransactionStateExecuteService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/transaction/CreateGroupExecuteService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/transaction/InitClientService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/transaction/JoinGroupExecuteService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/transaction/NotifyGroupExecuteService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/core/transaction/WriteTxExceptionExecuteService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/db/ManagerStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/db/domain/TxException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/db/mapper/TxExceptionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/db/redis/RedisGroupRelationship.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/db/redis/RedisManagerStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/db/redis/RedisSetManagerStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/db/redis/RedisTokenStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/ManagerRpcBeanHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/TxManagerManagerRefreshing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/RedirectController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/TxManagerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/auth/DefaultTokenStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/auth/TxManagerAdminAuthLogic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/auth/sauth/DefaultSAuthLogic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/auth/sauth/InterceptorConfigurer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/auth/sauth/SAuthConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/auth/sauth/SAuthHandleException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/auth/sauth/SAuthLogic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/auth/sauth/token/TokenInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/auth/sauth/token/TokenStorage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/model/DTXInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/model/ErrorResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/model/ExceptionInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/model/ExceptionList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/model/Token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/model/TxLogList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/model/TxManagerInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/restapi/model/TxManagerLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/service/AdminService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/service/ManagerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/service/TxExceptionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/service/WriteTxExceptionDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/service/impl/AdminServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/service/impl/ManagerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/service/impl/TxExceptionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/txex/AsyncTxExceptionListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/txex/TxExceptionListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/com/codingapi/txlcn/manager/support/txex/provider/DefaultExUrlProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/static/admin/assets/8c382430f673ad2237bbf19e5c8a4b00.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/static/admin/assets/c31278383b5623a8065aff89a3468b0c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/static/admin/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/static/admin/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/static/admin/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/static/admin/js/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-manager/target/classes/tx-manager.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-one/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-two/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dispersion/dispersion-job/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/dispersion_transaction/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dispersion/dispersion-transaction/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispersion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dispersion/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dubbo/zookeeper_dubbo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dubbo/zookeeper_dubbo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq-one/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq-one/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq-two/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq-two/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq-two/target/classes/com/practice/rabbitmq/RabbitmqTwoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/mq/rabbitmq/rabbitmq-two/target/classes/com/practice/rabbitmq/RabbitmqTwoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/target/classes/mapper/DyMemberMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/target/classes/mapper/mberMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatis-plus/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/mybatis-plus/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatisplusgenerator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatisplusgenerator/src/main/java/MybatisPlusGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/src/main/java/MybatisPlusGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatisplusgenerator/src/main/java/com/home/practice/controller/DyMemberController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatisplusgenerator/src/main/java/com/home/practice/entity/DyMember.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatisplusgenerator/src/main/java/com/home/practice/mapper/DyMemberMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatisplusgenerator/src/main/java/com/home/practice/service/IDyMemberService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatisplusgenerator/src/main/java/com/home/practice/service/impl/DyMemberServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatisplusgenerator/src/main/resources/mapper/DyMemberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/src/main/resources/mapper/DyMemberMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/mybatisplusgenerator/src/main/resources/mapper/mberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/src/main/resources/mapper/mberMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud/eureka/eureka_client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud/eureka/eureka_client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud/eureka/eureka_client/src/main/java/com/example/demo/EurekaClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud/eureka/eureka_client/src/main/java/com/example/demo/EurekaClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud/feign/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud/feign/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud/feign/src/main/java/com/example/controller/FeignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud/feign/src/main/java/com/example/controller/FeignController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud/ribbon/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud/ribbon/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud/ribbon/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud/ribbon/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/src/main/java/MybatisPlusGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/src/main/java/MybatisPlusGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/target/classes/META-INF/mybatis-plus-generator.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/target/classes/MybatisPlusGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/mybatis/mybatis-plus-generator/target/classes/MybatisPlusGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatis/mybatisplusgenerator/target/classes/META-INF/mybatis-plus-generator.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -392,101 +79,7 @@
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spring-cloud/ribbon/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dispersion/dispersion-job/dispersion-job-core/src/main/java/com/practices/dispersion/job/core/DispersionJobCoreApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dispersion/dispersion-job/dispersion-job-core/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dispersion/dispersion-transaction/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/listener/ApplicationStartListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="14" column="74" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mq/rabbitmq/rabbitmq-two/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/api/controller/AdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbo/zookeeper_dubbo/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -569,40 +162,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="controller" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="controller" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="mybatis-plus" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="mybatis-plus" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="mybatis-plus" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-          <item name="cn.jpush.api:jmessage-client:1.1.9" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="rabbitmq" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="web-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -618,112 +178,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction-manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tm" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tm" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction" type="462c0819:PsiDirectoryNode" />
-              <item name="dispersion-transaction-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tm" type="462c0819:PsiDirectoryNode" />
-              <item name="listener" type="462c0819:PsiDirectoryNode" />
+              <item name="spring-cloud" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -739,8 +206,8 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547708854931" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dispersion/dispersion-job" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548150200968" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mybatis/mybatis-plus-generator/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -879,18 +346,19 @@
       <workItem from="1547567343097" duration="2516000" />
       <workItem from="1547604135203" duration="1621000" />
       <workItem from="1547689054211" duration="13175000" />
+      <workItem from="1548066021072" duration="1426000" />
+      <workItem from="1548118932569" duration="1452000" />
+      <workItem from="1548733830379" duration="26000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22947000" />
+    <option name="totallyTimeSpent" value="25874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Persistence" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26226014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17643923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -898,9 +366,10 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Persistence" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -918,7 +387,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32995737" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
@@ -975,13 +444,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/netty/service/impl/ActionTServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dispersion/dispersion-transaction/dispersion-transaction-manager/src/main/java/com/codingapi/tm/model/ChannelSender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1120,9 +582,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-two/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-two/pom.xml" />
     <entry file="file://$PROJECT_DIR$/spring-cloud/eureka/eureka_server/src/main/java/com/example/eureka_server/EurekaServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1157,45 +617,12 @@
         <state relative-caret-position="-3151" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-one/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-one/src/main/java/com/practices/dispersion/transacation/one/TransactionOneApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-one/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/src/main/java/com/example/dispersion/lock/one/DispersionLockOneApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-one/src/main/resources/application.yml" />
+    <entry file="file://$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-one/src/main/java/com/practices/dispersion/transacation/one/TransactionOneApplication.java" />
+    <entry file="file://$PROJECT_DIR$/dispersion/dispersion_transaction/dispersion-transaction-one/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/src/main/java/com/example/dispersion/lock/one/DispersionLockOneApplication.java" />
+    <entry file="file://$PROJECT_DIR$/dispersion/dispersion-lock/dispersion-lock-one/src/main/resources/application.properties" />
     <entry file="file://$PROJECT_DIR$/dispersion/dispersion-lock/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1338,6 +765,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mybatis/mybatis-plus-generator/src/main/java/MybatisPlusGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="95" column="13" lean-forward="true" selection-start-line="95" selection-start-column="13" selection-end-line="95" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -1402,7 +839,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>dispersion-transaction-one</last-edited>
+          <last-edited>activemq</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

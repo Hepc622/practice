@@ -57,6 +57,7 @@
         <option value="$PROJECT_DIR$/mybatis/mybatisplusgenerator/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis/mybatis-plus/pom.xml" />
         <option value="$PROJECT_DIR$/dispersion/dispersion-job/dispersion-job-core/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis/mybatis-plus-generator/pom.xml" />
       </list>
     </option>
   </component>

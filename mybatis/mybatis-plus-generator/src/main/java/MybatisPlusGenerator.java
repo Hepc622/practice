@@ -64,10 +64,10 @@ public class MybatisPlusGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/32Know?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql://192.168.1.43:3306/db_jrsh?useUnicode=true&useSSL=false&characterEncoding=utf8");
         dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setUsername("root");
-        dsc.setPassword("");
+        dsc.setUsername("appadmin");
+        dsc.setPassword("appadmin");
         mpg.setDataSource(dsc);
 
         // 自定义配置
@@ -79,7 +79,7 @@ public class MybatisPlusGenerator {
         };
 
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.home.practice");
+        pc.setParent("com.zbhd.jrsh.provider.rabbitmq");
         mpg.setPackageInfo(pc);
 
         // 如果模板引擎是 freemarker
