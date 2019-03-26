@@ -9,9 +9,7 @@ import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * @author hpc
@@ -79,7 +77,7 @@ public class MybatisPlusGenerator {
         };
 
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.zbhd.jrsh.provider.rabbitmq");
+        pc.setParent("com.zbhd.jrsh.provider.chat.mpush");
         mpg.setPackageInfo(pc);
 
         // 如果模板引擎是 freemarker
@@ -110,10 +108,23 @@ public class MybatisPlusGenerator {
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
-        strategy.setInclude(scanner("表名"));
+        List<String> list = new ArrayList<>();
+        boolean flag = true;
+        while (flag) {
+            String s = scanner("是否继续");
+            if (s.equals("n")) {
+                flag = false;
+            } else {
+                String table = scanner("表名");
+                list.add(table);
+            }
+        }
+        strategy.setInclude(list.toArray(new String[]{}));
         strategy.setControllerMappingHyphenStyle(true);
         mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
         mpg.execute();
+
+
     }
 }
