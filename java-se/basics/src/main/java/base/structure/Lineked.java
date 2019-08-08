@@ -1,4 +1,4 @@
-package 链表;
+package base.structure;
 
 /**
  * 此类是：单链表结构，双链表，循环链表
@@ -6,13 +6,13 @@ package 链表;
  * @author hpc
  * @date 2016年12月14日 下午3:24:57
  */
-public class App<E> {
+public class Lineked<E> {
 	private LinkNode first;
 	private LinkNode last;
 	private int size;
 
 	public static void main(String[] args) {
-		App<String> app = new App<String>();
+		Lineked<String> app = new Lineked<String>();
 		for (int i = 1; i <= 30; i++) {
 			app.insert(i + "");
 		}
@@ -25,17 +25,19 @@ public class App<E> {
 				y = 1;
 				x++;
 			}
-			if (x == 15)
+			if (x == 15) {
 				break ok;
-			if (j >= 30 - x)
+			}
+			if (j >= 30 - x) {
 				j = 0;
+			}
 			y++;
 			j++;
 		}
 		app.show();
 	}
 
-	public App() {
+	public Lineked() {
 		first = new LinkNode(null, null);
 		last = first;
 	}

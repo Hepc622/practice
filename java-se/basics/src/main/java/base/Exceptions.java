@@ -1,4 +1,4 @@
-package 异常;
+package base;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ import java.io.FileNotFoundException;
  * @author hpc
  * @date 2016年12月9日 下午9:02:23
  */
-public class App {
+public class Exceptions {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) throws SbException {
 

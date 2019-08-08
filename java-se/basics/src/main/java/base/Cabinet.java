@@ -1,4 +1,4 @@
-package 自动拆装箱;
+package base;
 
 /**
  * 此类是：java 自动拆装箱
@@ -6,7 +6,7 @@ package 自动拆装箱;
  * @author hpc
  * @date 2016年12月9日 上午12:31:18
  */
-public class App {
+public class Cabinet {
 	/**
 	 * int 类型自动拆装箱<br>
 	 * 如果将int型的的变量[-128-128]<br>

@@ -1,4 +1,4 @@
-package 集合;
+package base;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ import java.util.*;
  * @author hpc
  * @date 2016年12月9日 下午1:37:20
  */
-public class App {
+public class Collections {
 
 	public static void main(String[] args) {
 		priorityQueue();
@@ -81,7 +81,6 @@ public class App {
 }
 
 class MyComparator implements Comparator<String> {
-	@Override
 	public int compare(String o1, String o2) {
 		return o1.hashCode() > o2.hashCode() ? 1 : 0;
 	}

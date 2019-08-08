@@ -1,4 +1,4 @@
-package 线程;
+package base;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
  * @author hpc
  * @date 2016年12月9日 上午9:51:44
  */
-public class App {
+public class Threads {
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
 		deadlock();
 	}
@@ -22,15 +22,17 @@ public class App {
 		Thread thread = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				for (;;)
+				for (;;) {
 					resource();
+				}
 			}
 		});
 		Thread thread2 = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				for (;;)
+				for (;;) {
 					resource();
+				}
 			}
 		});
 		thread.start();
@@ -70,6 +72,7 @@ public class App {
 }
 
 class myThread implements Runnable {
+	@Override
 	public void run() {
 		System.out.println("实现runnable接口");
 	}

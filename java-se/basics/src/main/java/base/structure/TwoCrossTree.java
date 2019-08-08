@@ -1,4 +1,4 @@
-package 二叉树;
+package base.structure;
 
 
 /**
@@ -18,11 +18,11 @@ package 二叉树;
  * @param <E>
  * @date 2017年1月4日 下午6:45:49
  */
-public class App<E>{
+public class TwoCrossTree<E>{
 	private Tree root;
 	private int size;
 	public static void main(String[] args) {
-		App<Integer> app = new App<Integer>();
+		TwoCrossTree<Integer> app = new TwoCrossTree<Integer>();
 		app.insert(1,app.root);
 		app.insert(2,app.root);
 		app.insert(10,app.root);
@@ -60,7 +60,7 @@ public class App<E>{
 			root = new Tree(data);
 			size++;
 		}
-		if(tree!=null)
+		if(tree!=null) {
 			if(data.hashCode()<tree.data.hashCode()){
 				// 如果节点等于空就将输入插入
 				if(tree.left==null){
@@ -68,16 +68,19 @@ public class App<E>{
 					size++;
 				}
 				// 如果节点不等于空就取出其节点继续遍历
-				else
+				else {
 					insert(data,tree.left);
+				}
 			}else if(data.hashCode()>tree.data.hashCode()){
 				if(tree.right==null){
 					tree.right=new Tree(data);
 					size++;
 				}
-				else
+				else {
 					insert(data,tree.right);
+				}
 			}
+		}
 	}
 	/**
 	 * 是否为空
@@ -99,9 +102,9 @@ public class App<E>{
      */
     public int height(Tree tree){
     	int r,l;
-    	if(tree==null)
-    		return 0;
-    	else{
+    	if(tree==null) {
+			return 0;
+		} else{
 	    	l=height(tree.left)+1;
 	    	r=height(tree.right)+1;
 	    	return l<=r?r:l;
@@ -204,8 +207,9 @@ public class App<E>{
     public boolean contains(Tree tree,E data){
     	boolean l=false;
     	boolean r=false;
-    	if(tree==null) return false;
-    	else
+    	if(tree==null) {
+			return false;
+		} else
 	    	if(tree.data.equals(data)){
 	    		return true;
 	    	}else{

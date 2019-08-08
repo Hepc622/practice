@@ -1,4 +1,4 @@
-package super关键字;
+package base;
 
 import org.junit.Test;
 
@@ -13,10 +13,10 @@ import org.junit.Test;
  * @author hpc
  * @date 2016年12月21日 上午10:21:40
  */
-public class App extends Bpp {
+public class SuperWord extends SuperWordB {
 
     public static void main(String[] args) {
-        App inc = new App();
+        SuperWord inc = new SuperWord();
         int i = 1;
         inc.fermin(i);
         i = i - 1;
@@ -27,7 +27,7 @@ public class App extends Bpp {
         i++;
     }
 
-    public App() {
+    public SuperWord() {
         super("asdf");
     }
 
@@ -39,14 +39,14 @@ public class App extends Bpp {
     }
 }
 
-class Bpp {
+class SuperWordB {
     public int x = 22;
 
-    public Bpp() {
+    public SuperWordB() {
         System.out.println("......Bpp");
     }
 
-    public Bpp(String str) {
+    public SuperWordB(String str) {
         System.out.println(str);
     }
 

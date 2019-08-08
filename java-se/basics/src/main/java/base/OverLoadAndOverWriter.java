@@ -1,4 +1,4 @@
-package 重载与覆盖;
+package base;
 
 import java.io.IOException;
 
@@ -12,7 +12,7 @@ import java.io.IOException;
  * @author hpc
  * @date 2016年12月9日 上午12:38:00
  */
-public class App extends Bpp {
+public class OverLoadAndOverWriter extends OverLoadAndOverWriterBpp {
 
 	
 	/* 权限要>=父类的方法		异常<=父类抛的异常
@@ -32,7 +32,7 @@ public class App extends Bpp {
 	}
 }
 
-class Bpp {
+class OverLoadAndOverWriterBpp {
 	void bpp() throws Exception {
 		System.out.println("BPP");
 	}

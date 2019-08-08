@@ -1,4 +1,4 @@
-package 回收机制;
+package base;
 
 /**
  * 此类是：java 的回收机制 只回收没有没引用的对象 在对象没有被引用，且内存不知的时候，jvm会去自动调用gc回收机制
@@ -6,7 +6,7 @@ package 回收机制;
  * @author hpc
  * @date 2016年12月9日 下午8:26:12
  */
-public class App {
+public class Back {
 
 	public static void main(String[] args) throws InterruptedException {
 		int a=123;int b=321;

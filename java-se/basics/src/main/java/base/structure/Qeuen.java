@@ -1,4 +1,4 @@
-package 队列;
+package base.structure;
 
 /**
  * 此类是：队列的实现
@@ -6,12 +6,12 @@ package 队列;
  * @author hpc
  * @date 2016年12月20日 下午1:42:50
  */
-public class App<E> {
+public class Qeuen<E> {
 	private Node front, rear;
 	private int size;
 
 	public static void main(String[] str) {
-		App<String> app = new App<String>();
+		Qeuen<String> app = new Qeuen<String>();
 		app.insert("1");
 		app.insert("2");
 		app.insert("3");
@@ -20,12 +20,12 @@ public class App<E> {
 		app.insert("6");
 	}
 
-	public App() {
+	public Qeuen() {
 		front = new Node(new Node());
 		rear = front;
 	}
 
-	public App(E data) {
+	public Qeuen(E data) {
 		front = new Node(data, new Node());
 		rear = front;
 		size++;
@@ -33,8 +33,9 @@ public class App<E> {
 
 	public void insert(E e) {
 		Node node = new Node(e, new Node());
-		if (front.data == null)
+		if (front.data == null) {
 			front = node;
+		}
 		rear.node = node;
 		rear = node;
 		size++;

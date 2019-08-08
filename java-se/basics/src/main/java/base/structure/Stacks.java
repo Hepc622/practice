@@ -1,24 +1,24 @@
-package 栈;
+package base.structure;
 
 /**
  * 此类是：栈的实现，后进先出
  * @author hpc
  * @date 2016年12月20日 下午3:08:51
  */
-public class App<E> {
+public class Stacks<E> {
 	private LinkNode first;
 	private LinkNode last;
 	private int size;
 
 	public static void main(String[] args) {
-		App<String> app = new App<String>();
+		Stacks<String> app = new Stacks<String>();
 		for (int i = 1; i <= 30; i++) {
 			app.insert(i + "");
 		}
 		app.show();
 	}
 
-	public App() {
+	public Stacks() {
 		first = new LinkNode(null, null);
 		last = first;
 	}

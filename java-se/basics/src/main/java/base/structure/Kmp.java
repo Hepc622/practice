@@ -1,4 +1,4 @@
-package KMP算法;
+package base.structure;
 
 /**
  * 此类是：KMP算法
@@ -6,7 +6,7 @@ package KMP算法;
  * @author hpc
  * @date 2016年12月19日 下午7:58:48
  */
-public class App {
+public class Kmp {
 	public static void main(String[] args) {
 		String s = "saflaaaaajashpclsadfoihpclkdsaoihpc";
 		String t = "aaaaajashpc";
@@ -24,10 +24,11 @@ public class App {
 		while (j < str.length - 1) {
 			if (k == -1 || str[j] == str[k]) {
 				k++;j++;
-				if (str[j] != str[k])
+				if (str[j] != str[k]) {
 					next[j] = k;
-				else
+				} else {
 					next[j] = next[k];
+				}
 			} else {
 				k = next[k];
 			}

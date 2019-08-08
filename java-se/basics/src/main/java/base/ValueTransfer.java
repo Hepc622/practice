@@ -1,4 +1,4 @@
-package 关于java传值;
+package base;
 
 /**
  * 此类是：值传递！Java中只有按值传递，没有按引用传递！
@@ -7,7 +7,7 @@ package 关于java传值;
  * @author hpc
  * @date 2016年12月8日 下午11:42:20
  */
-public class App {
+public class ValueTransfer {
     static String str = "11";
     static int[][] i = {{111, 23, 4, 65}};
 
@@ -24,7 +24,7 @@ public class App {
 //        System.out.println(o);
 //        obj(o);
 //        System.out.println(o);
-        int x=0.y=1;
+        int x=0,y=1;
         changeInteger(x,y);
         System.out.printf(x+":"+y);
     }
@@ -43,7 +43,7 @@ public class App {
     }
 
     public static void chanceBasicType(String str) {
-        App.str = "22";
+        ValueTransfer.str = "22";
     }
 
     public static void chanceObjectType(int[] str) {
